@@ -7,28 +7,28 @@ jQuery(document).ready(function($) {
     //bottomCates: '<div class="own-text"><p>free shipping in the u.s. & internationally</p></div>'
 
     menuItem(2).HaloMegaMenu({
-        dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
-        dropWidth: '700px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
-        dropType: 'noImage',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        dropAlign: '{{#if settings.megamenu_item2_align}}{{settings.megamenu_item2_align}}{{else}}left{{/if}}',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+        dropWidth: '{{#if settings.megamenu_item2_width}}{{settings.megamenu_item2_width}}{{else}}700px{{/if}}',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+        dropType: '{{#if settings.megamenu_item2_type}}{{settings.megamenu_item2_type}}{{else}}noImage{{/if}}',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
         imageAreaWidth: '',    // width of images area
         cateAreaWidth: '100%',     // width of categories area
-        cateColumns: 3,           // columns of categories area - max 5 columns
+        cateColumns: {{#if settings.megamenu_item2_columns}}{{settings.megamenu_item2_columns}}{{else}}3{{/if}},           // columns of categories area - max 5 columns
         addclass_special: 'position_image_right'
     });
     menuItem(3).HaloMegaMenu({
-        dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
-        dropWidth: '900px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
-        dropType: 'imageTop',     // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        dropAlign: '{{#if settings.megamenu_item3_align}}{{settings.megamenu_item3_align}}{{else}}left{{/if}}',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+        dropWidth: '{{#if settings.megamenu_item3_width}}{{settings.megamenu_item3_width}}{{else}}900px{{/if}}',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+        dropType: '{{#if settings.megamenu_item3_type}}{{settings.megamenu_item3_type}}{{else}}imageTop{{/if}}',     // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
         imageAreaWidth: '',     // width of images area
         cateAreaWidth: '100%',    // width of categories area
-        cateColumns: 4,           // columns of categories area - max 5 columns
+        cateColumns: {{#if settings.megamenu_item3_columns}}{{settings.megamenu_item3_columns}}{{else}}4{{/if}},           // columns of categories area - max 5 columns
         // contents for images column (HTML supported)
-        imagesTop: ['<a href="#placeholder_link"><img src="/product_images/uploaded_images/image-menu-1.png"/></a>',
-            '<a href="#placeholder_link"><img src="/product_images/uploaded_images/image-menu-2.png"/></a>',
-            '<a href="#placeholder_link"><img src="/product_images/uploaded_images/image-menu-3.png"/></a>',
-            '<a href="#placeholder_link"><img src="/product_images/uploaded_images/image-menu-4.png"/></a>'
+        imagesTop: ['<a href="{{#if settings.megamenu_image_1_link}}{{settings.megamenu_image_1_link}}{{else}}#placeholder_link{{/if}}"><img src="{{#if settings.megamenu_image_1}}{{settings.megamenu_image_1}}{{else}}/product_images/uploaded_images/image-menu-1.png{{/if}}"/></a>',
+            '<a href="{{#if settings.megamenu_image_2_link}}{{settings.megamenu_image_2_link}}{{else}}#placeholder_link{{/if}}"><img src="{{#if settings.megamenu_image_2}}{{settings.megamenu_image_2}}{{else}}/product_images/uploaded_images/image-menu-2.png{{/if}}"/></a>',
+            '<a href="{{#if settings.megamenu_image_3_link}}{{settings.megamenu_image_3_link}}{{else}}#placeholder_link{{/if}}"><img src="{{#if settings.megamenu_image_3}}{{settings.megamenu_image_3}}{{else}}/product_images/uploaded_images/image-menu-3.png{{/if}}"/></a>',
+            '<a href="{{#if settings.megamenu_image_4_link}}{{settings.megamenu_image_4_link}}{{else}}#placeholder_link{{/if}}"><img src="{{#if settings.megamenu_image_4}}{{settings.megamenu_image_4}}{{else}}/product_images/uploaded_images/image-menu-4.png{{/if}}"/></a>'
         ],
-        bottomCates: '<div class="image_brand"><div class="title"><label>Popular Brands</label><a href="/brands/">View All Brands</a></div><div class="Brand-Image"><ul><li class=""><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-1.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-2.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-3.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-4.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-5.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-6.png"></a></li></ul></div></div>'
+        bottomCates: '<div class="image_brand"><div class="title"><label>Popular Brands</label><a href="/brands/">View All Brands</a></div><div class="Brand-Image"><ul><li class=""><a href="{{#if settings.megamenu_brand_1_link}}{{settings.megamenu_brand_1_link}}{{else}}/area-rugs/{{/if}}"><img src="{{#if settings.megamenu_brand_1}}{{settings.megamenu_brand_1}}{{else}}/product_images/uploaded_images/image-menu-brand-1.png{{/if}}"></a></li><li><a href="{{#if settings.megamenu_brand_2_link}}{{settings.megamenu_brand_2_link}}{{else}}/area-rugs/{{/if}}"><img src="{{#if settings.megamenu_brand_2}}{{settings.megamenu_brand_2}}{{else}}/product_images/uploaded_images/image-menu-brand-2.png{{/if}}"></a></li><li><a href="{{#if settings.megamenu_brand_3_link}}{{settings.megamenu_brand_3_link}}{{else}}/area-rugs/{{/if}}"><img src="{{#if settings.megamenu_brand_3}}{{settings.megamenu_brand_3}}{{else}}/product_images/uploaded_images/image-menu-brand-3.png{{/if}}"></a></li><li><a href="{{#if settings.megamenu_brand_4_link}}{{settings.megamenu_brand_4_link}}{{else}}/area-rugs/{{/if}}"><img src="{{#if settings.megamenu_brand_4}}{{settings.megamenu_brand_4}}{{else}}/product_images/uploaded_images/image-menu-brand-4.png{{/if}}"></a></li><li><a href="{{#if settings.megamenu_brand_5_link}}{{settings.megamenu_brand_5_link}}{{else}}/area-rugs/{{/if}}"><img src="{{#if settings.megamenu_brand_5}}{{settings.megamenu_brand_5}}{{else}}/product_images/uploaded_images/image-menu-brand-5.png{{/if}}"></a></li><li><a href="{{#if settings.megamenu_brand_6_link}}{{settings.megamenu_brand_6_link}}{{else}}/area-rugs/{{/if}}"><img src="{{#if settings.megamenu_brand_6}}{{settings.megamenu_brand_6}}{{else}}/product_images/uploaded_images/image-menu-brand-6.png{{/if}}"></a></li></ul></div></div>'
     });
 });
 </script>

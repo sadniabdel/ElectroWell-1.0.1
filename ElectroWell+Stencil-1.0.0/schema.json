@@ -630,6 +630,26 @@
       },
       {
         "type": "heading",
+        "content": "Top Bar Promotion"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show Top Bar Promotion",
+        "id": "show_top_bar_promotion",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Top Bar Promotion Image URL",
+        "id": "top_bar_promotion_image"
+      },
+      {
+        "type": "text",
+        "label": "Top Bar Promotion Link",
+        "id": "top_bar_promotion_link"
+      },
+      {
+        "type": "heading",
         "content": "Header Top"
       },
       {
@@ -641,6 +661,48 @@
         "type": "color",
         "label": "Text color",
         "id": "header-top-textColor"
+      },
+      {
+        "type": "heading",
+        "content": "Free Shipping Message"
+      },
+      {
+        "type": "text",
+        "label": "Free Shipping Text",
+        "id": "header_free_shipping_text"
+      },
+      {
+        "type": "text",
+        "label": "Free Shipping Link",
+        "id": "header_free_shipping_link"
+      },
+      {
+        "type": "text",
+        "label": "Free Shipping Detail Text",
+        "id": "header_free_shipping_detail"
+      },
+      {
+        "type": "heading",
+        "content": "Navigation Phone Number"
+      },
+      {
+        "type": "text",
+        "label": "Phone Number Label",
+        "id": "nav_phone_label"
+      },
+      {
+        "type": "heading",
+        "content": "Need Help Link"
+      },
+      {
+        "type": "text",
+        "label": "Need Help Text",
+        "id": "nav_need_help_text"
+      },
+      {
+        "type": "text",
+        "label": "Need Help Link",
+        "id": "nav_need_help_link"
       },
       {
         "type": "heading",
@@ -779,6 +841,230 @@
         "type": "color",
         "label": "Dropdown text hover color",
         "id": "navPages-subMenu-hover-textColor"
+      },
+      {
+        "type": "heading",
+        "content": "Megamenu Images & Links"
+      },
+      {
+        "type": "text",
+        "label": "Megamenu Image 1 URL",
+        "id": "megamenu_image_1"
+      },
+      {
+        "type": "text",
+        "label": "Megamenu Image 1 Link",
+        "id": "megamenu_image_1_link"
+      },
+      {
+        "type": "text",
+        "label": "Megamenu Image 2 URL",
+        "id": "megamenu_image_2"
+      },
+      {
+        "type": "text",
+        "label": "Megamenu Image 2 Link",
+        "id": "megamenu_image_2_link"
+      },
+      {
+        "type": "text",
+        "label": "Megamenu Image 3 URL",
+        "id": "megamenu_image_3"
+      },
+      {
+        "type": "text",
+        "label": "Megamenu Image 3 Link",
+        "id": "megamenu_image_3_link"
+      },
+      {
+        "type": "text",
+        "label": "Megamenu Image 4 URL",
+        "id": "megamenu_image_4"
+      },
+      {
+        "type": "text",
+        "label": "Megamenu Image 4 Link",
+        "id": "megamenu_image_4_link"
+      },
+      {
+        "type": "heading",
+        "content": "Megamenu Brand Images"
+      },
+      {
+        "type": "text",
+        "label": "Brand Image 1 URL",
+        "id": "megamenu_brand_1"
+      },
+      {
+        "type": "text",
+        "label": "Brand Image 1 Link",
+        "id": "megamenu_brand_1_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand Image 2 URL",
+        "id": "megamenu_brand_2"
+      },
+      {
+        "type": "text",
+        "label": "Brand Image 2 Link",
+        "id": "megamenu_brand_2_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand Image 3 URL",
+        "id": "megamenu_brand_3"
+      },
+      {
+        "type": "text",
+        "label": "Brand Image 3 Link",
+        "id": "megamenu_brand_3_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand Image 4 URL",
+        "id": "megamenu_brand_4"
+      },
+      {
+        "type": "text",
+        "label": "Brand Image 4 Link",
+        "id": "megamenu_brand_4_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand Image 5 URL",
+        "id": "megamenu_brand_5"
+      },
+      {
+        "type": "text",
+        "label": "Brand Image 5 Link",
+        "id": "megamenu_brand_5_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand Image 6 URL",
+        "id": "megamenu_brand_6"
+      },
+      {
+        "type": "text",
+        "label": "Brand Image 6 Link",
+        "id": "megamenu_brand_6_link"
+      },
+      {
+        "type": "heading",
+        "content": "Megamenu Style Options"
+      },
+      {
+        "type": "select",
+        "label": "Menu Item 2 - Drop Align",
+        "id": "megamenu_item2_align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "fullWidth",
+            "label": "Full Width"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "label": "Menu Item 2 - Drop Width",
+        "id": "megamenu_item2_width"
+      },
+      {
+        "type": "select",
+        "label": "Menu Item 2 - Drop Type",
+        "id": "megamenu_item2_type",
+        "options": [
+          {
+            "value": "noImage",
+            "label": "No Image"
+          },
+          {
+            "value": "imageLeft",
+            "label": "Image Left"
+          },
+          {
+            "value": "imageRight",
+            "label": "Image Right"
+          },
+          {
+            "value": "imageTop",
+            "label": "Image Top"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "label": "Menu Item 2 - Category Columns",
+        "id": "megamenu_item2_columns"
+      },
+      {
+        "type": "select",
+        "label": "Menu Item 3 - Drop Align",
+        "id": "megamenu_item3_align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "fullWidth",
+            "label": "Full Width"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "label": "Menu Item 3 - Drop Width",
+        "id": "megamenu_item3_width"
+      },
+      {
+        "type": "select",
+        "label": "Menu Item 3 - Drop Type",
+        "id": "megamenu_item3_type",
+        "options": [
+          {
+            "value": "noImage",
+            "label": "No Image"
+          },
+          {
+            "value": "imageLeft",
+            "label": "Image Left"
+          },
+          {
+            "value": "imageRight",
+            "label": "Image Right"
+          },
+          {
+            "value": "imageTop",
+            "label": "Image Top"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "label": "Menu Item 3 - Category Columns",
+        "id": "megamenu_item3_columns"
       }
     ]
   },
@@ -797,9 +1083,388 @@
           },
           {
             "value": "wide",
-            "label": "Mode"
+            "label": "Wide"
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "Home Page Content",
+    "settings": [
+      {
+        "type": "heading",
+        "content": "Header Custom HTML Block"
+      },
+      {
+        "type": "paragraph",
+        "content": "This appears below the header on the home page. Use HTML for custom content."
+      },
+      {
+        "type": "text",
+        "label": "Custom HTML Block - Label Text",
+        "id": "home_custom_html_label"
+      },
+      {
+        "type": "text",
+        "label": "Custom Box 1 - Icon Class",
+        "id": "home_custom_box1_icon"
+      },
+      {
+        "type": "text",
+        "label": "Custom Box 1 - Title",
+        "id": "home_custom_box1_title"
+      },
+      {
+        "type": "text",
+        "label": "Custom Box 2 - Icon Class",
+        "id": "home_custom_box2_icon"
+      },
+      {
+        "type": "text",
+        "label": "Custom Box 2 - Title",
+        "id": "home_custom_box2_title"
+      },
+      {
+        "type": "text",
+        "label": "Custom Box 3 - Icon Class",
+        "id": "home_custom_box3_icon"
+      },
+      {
+        "type": "text",
+        "label": "Custom Box 3 - Title",
+        "id": "home_custom_box3_title"
+      },
+      {
+        "type": "text",
+        "label": "Custom Box 4 - Icon Class",
+        "id": "home_custom_box4_icon"
+      },
+      {
+        "type": "text",
+        "label": "Custom Box 4 - Title",
+        "id": "home_custom_box4_title"
+      },
+      {
+        "type": "heading",
+        "content": "Home Right Slider Banner"
+      },
+      {
+        "type": "text",
+        "label": "Right Banner Image URL",
+        "id": "home_right_banner_image"
+      },
+      {
+        "type": "text",
+        "label": "Right Banner Link",
+        "id": "home_right_banner_link"
+      },
+      {
+        "type": "text",
+        "label": "Right Banner Title",
+        "id": "home_right_banner_title"
+      },
+      {
+        "type": "heading",
+        "content": "Shop By Top Category"
+      },
+      {
+        "type": "text",
+        "label": "Section Heading",
+        "id": "home_top_category_heading"
+      },
+      {
+        "type": "text",
+        "label": "Section Heading Highlight",
+        "id": "home_top_category_heading_highlight"
+      },
+      {
+        "type": "text",
+        "label": "Category 1 - Image URL",
+        "id": "home_category1_image"
+      },
+      {
+        "type": "text",
+        "label": "Category 1 - Link",
+        "id": "home_category1_link"
+      },
+      {
+        "type": "text",
+        "label": "Category 1 - Title",
+        "id": "home_category1_title"
+      },
+      {
+        "type": "text",
+        "label": "Category 1 - Description",
+        "id": "home_category1_desc"
+      },
+      {
+        "type": "text",
+        "label": "Category 2 - Image URL",
+        "id": "home_category2_image"
+      },
+      {
+        "type": "text",
+        "label": "Category 2 - Link",
+        "id": "home_category2_link"
+      },
+      {
+        "type": "text",
+        "label": "Category 2 - Title",
+        "id": "home_category2_title"
+      },
+      {
+        "type": "text",
+        "label": "Category 2 - Description",
+        "id": "home_category2_desc"
+      },
+      {
+        "type": "text",
+        "label": "Category 3 - Image URL",
+        "id": "home_category3_image"
+      },
+      {
+        "type": "text",
+        "label": "Category 3 - Link",
+        "id": "home_category3_link"
+      },
+      {
+        "type": "text",
+        "label": "Category 3 - Title",
+        "id": "home_category3_title"
+      },
+      {
+        "type": "text",
+        "label": "Category 3 - Description",
+        "id": "home_category3_desc"
+      },
+      {
+        "type": "text",
+        "label": "Category 4 - Image URL",
+        "id": "home_category4_image"
+      },
+      {
+        "type": "text",
+        "label": "Category 4 - Link",
+        "id": "home_category4_link"
+      },
+      {
+        "type": "text",
+        "label": "Category 4 - Title",
+        "id": "home_category4_title"
+      },
+      {
+        "type": "text",
+        "label": "Category 4 - Description",
+        "id": "home_category4_desc"
+      },
+      {
+        "type": "text",
+        "label": "Category 5 - Image URL",
+        "id": "home_category5_image"
+      },
+      {
+        "type": "text",
+        "label": "Category 5 - Link",
+        "id": "home_category5_link"
+      },
+      {
+        "type": "text",
+        "label": "Category 5 - Title",
+        "id": "home_category5_title"
+      },
+      {
+        "type": "text",
+        "label": "Category 5 - Description",
+        "id": "home_category5_desc"
+      },
+      {
+        "type": "text",
+        "label": "Category 6 - Image URL",
+        "id": "home_category6_image"
+      },
+      {
+        "type": "text",
+        "label": "Category 6 - Link",
+        "id": "home_category6_link"
+      },
+      {
+        "type": "text",
+        "label": "Category 6 - Title",
+        "id": "home_category6_title"
+      },
+      {
+        "type": "text",
+        "label": "Category 6 - Description",
+        "id": "home_category6_desc"
+      },
+      {
+        "type": "heading",
+        "content": "Home Middle Banner"
+      },
+      {
+        "type": "text",
+        "label": "Middle Banner Image URL",
+        "id": "home_middle_banner_image"
+      },
+      {
+        "type": "text",
+        "label": "Middle Banner Link",
+        "id": "home_middle_banner_link"
+      },
+      {
+        "type": "heading",
+        "content": "Home Brand Slider"
+      },
+      {
+        "type": "text",
+        "label": "Brand 1 - Image URL",
+        "id": "home_brand1_image"
+      },
+      {
+        "type": "text",
+        "label": "Brand 1 - Link",
+        "id": "home_brand1_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand 1 - Title",
+        "id": "home_brand1_title"
+      },
+      {
+        "type": "text",
+        "label": "Brand 2 - Image URL",
+        "id": "home_brand2_image"
+      },
+      {
+        "type": "text",
+        "label": "Brand 2 - Link",
+        "id": "home_brand2_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand 2 - Title",
+        "id": "home_brand2_title"
+      },
+      {
+        "type": "text",
+        "label": "Brand 3 - Image URL",
+        "id": "home_brand3_image"
+      },
+      {
+        "type": "text",
+        "label": "Brand 3 - Link",
+        "id": "home_brand3_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand 3 - Title",
+        "id": "home_brand3_title"
+      },
+      {
+        "type": "text",
+        "label": "Brand 4 - Image URL",
+        "id": "home_brand4_image"
+      },
+      {
+        "type": "text",
+        "label": "Brand 4 - Link",
+        "id": "home_brand4_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand 4 - Title",
+        "id": "home_brand4_title"
+      },
+      {
+        "type": "text",
+        "label": "Brand 5 - Image URL",
+        "id": "home_brand5_image"
+      },
+      {
+        "type": "text",
+        "label": "Brand 5 - Link",
+        "id": "home_brand5_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand 5 - Title",
+        "id": "home_brand5_title"
+      },
+      {
+        "type": "text",
+        "label": "Brand 6 - Image URL",
+        "id": "home_brand6_image"
+      },
+      {
+        "type": "text",
+        "label": "Brand 6 - Link",
+        "id": "home_brand6_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand 6 - Title",
+        "id": "home_brand6_title"
+      },
+      {
+        "type": "text",
+        "label": "Brand 7 - Image URL",
+        "id": "home_brand7_image"
+      },
+      {
+        "type": "text",
+        "label": "Brand 7 - Link",
+        "id": "home_brand7_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand 7 - Title",
+        "id": "home_brand7_title"
+      },
+      {
+        "type": "text",
+        "label": "Brand 8 - Image URL",
+        "id": "home_brand8_image"
+      },
+      {
+        "type": "text",
+        "label": "Brand 8 - Link",
+        "id": "home_brand8_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand 8 - Title",
+        "id": "home_brand8_title"
+      },
+      {
+        "type": "text",
+        "label": "Brand 9 - Image URL",
+        "id": "home_brand9_image"
+      },
+      {
+        "type": "text",
+        "label": "Brand 9 - Link",
+        "id": "home_brand9_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand 9 - Title",
+        "id": "home_brand9_title"
+      },
+      {
+        "type": "text",
+        "label": "Brand 10 - Image URL",
+        "id": "home_brand10_image"
+      },
+      {
+        "type": "text",
+        "label": "Brand 10 - Link",
+        "id": "home_brand10_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand 10 - Title",
+        "id": "home_brand10_title"
       }
     ]
   },
@@ -1587,6 +2252,21 @@
         "content": "Footer Info"
       },
       {
+        "type": "text",
+        "label": "Footer Info Text",
+        "id": "footer_info_text"
+      },
+      {
+        "type": "text",
+        "label": "Footer Info Phone",
+        "id": "footer_info_phone"
+      },
+      {
+        "type": "text",
+        "label": "Footer Info Email",
+        "id": "footer_info_email"
+      },
+      {
         "type": "color",
         "label": "Background Info color",
         "id": "footer-infor-bgColor"
@@ -1595,6 +2275,129 @@
         "type": "color",
         "label": "Text Info color",
         "id": "footer-info-text-color"
+      },
+      {
+        "type": "heading",
+        "content": "Footer Middle Services"
+      },
+      {
+        "type": "text",
+        "label": "Service 1 - Title",
+        "id": "footer_service1_title"
+      },
+      {
+        "type": "text",
+        "label": "Service 1 - Text",
+        "id": "footer_service1_text"
+      },
+      {
+        "type": "text",
+        "label": "Service 2 - Title",
+        "id": "footer_service2_title"
+      },
+      {
+        "type": "text",
+        "label": "Service 2 - Text",
+        "id": "footer_service2_text"
+      },
+      {
+        "type": "text",
+        "label": "Service 3 - Title",
+        "id": "footer_service3_title"
+      },
+      {
+        "type": "text",
+        "label": "Service 3 - Text",
+        "id": "footer_service3_text"
+      },
+      {
+        "type": "text",
+        "label": "Service 4 - Title",
+        "id": "footer_service4_title"
+      },
+      {
+        "type": "text",
+        "label": "Service 4 - Text",
+        "id": "footer_service4_text"
+      },
+      {
+        "type": "heading",
+        "content": "Footer Payment Icons"
+      },
+      {
+        "type": "text",
+        "label": "Payment Icon 1 - Image URL",
+        "id": "footer_payment1_image"
+      },
+      {
+        "type": "text",
+        "label": "Payment Icon 1 - Link",
+        "id": "footer_payment1_link"
+      },
+      {
+        "type": "text",
+        "label": "Payment Icon 1 - Title",
+        "id": "footer_payment1_title"
+      },
+      {
+        "type": "text",
+        "label": "Payment Icon 2 - Image URL",
+        "id": "footer_payment2_image"
+      },
+      {
+        "type": "text",
+        "label": "Payment Icon 2 - Link",
+        "id": "footer_payment2_link"
+      },
+      {
+        "type": "text",
+        "label": "Payment Icon 2 - Title",
+        "id": "footer_payment2_title"
+      },
+      {
+        "type": "text",
+        "label": "Payment Icon 3 - Image URL",
+        "id": "footer_payment3_image"
+      },
+      {
+        "type": "text",
+        "label": "Payment Icon 3 - Link",
+        "id": "footer_payment3_link"
+      },
+      {
+        "type": "text",
+        "label": "Payment Icon 3 - Title",
+        "id": "footer_payment3_title"
+      },
+      {
+        "type": "text",
+        "label": "Payment Icon 4 - Image URL",
+        "id": "footer_payment4_image"
+      },
+      {
+        "type": "text",
+        "label": "Payment Icon 4 - Link",
+        "id": "footer_payment4_link"
+      },
+      {
+        "type": "text",
+        "label": "Payment Icon 4 - Title",
+        "id": "footer_payment4_title"
+      },
+      {
+        "type": "text",
+        "label": "Payment Icon 5 - Image URL",
+        "id": "footer_payment5_image"
+      },
+      {
+        "type": "text",
+        "label": "Payment Icon 5 - Link",
+        "id": "footer_payment5_link"
+      },
+      {
+        "type": "text",
+        "label": "Payment Icon 5 - Title",
+        "id": "footer_payment5_title"
       },
       {
         "type": "heading",

@@ -21,25 +21,25 @@
 <div class="halo-custom-html-block hidden-mobile">
     <div class="container">
         <div class="row">
-              <label class="hl-label">The Store Advantage</label>
+              <label class="hl-label">{{#if settings.home_custom_html_label}}{{settings.home_custom_html_label}}{{else}}The Store Advantage{{/if}}</label>
               <div class="box wow fadeInUp" data-wow-delay="200ms">
-                  <span class="icon"><i class="fa fa-check"></i></span>
-                  <h4>Shop with confidence</h4>
+                  <span class="icon"><i class="fa {{#if settings.home_custom_box1_icon}}{{settings.home_custom_box1_icon}}{{else}}fa-check{{/if}}"></i></span>
+                  <h4>{{#if settings.home_custom_box1_title}}{{settings.home_custom_box1_title}}{{else}}Shop with confidence{{/if}}</h4>
               </div>
-              <div class="box wow fadeInUp" data-wow-delay="300ms">                
-                  <span class="icon"><i class="fa fa-cog"></i></span>
-                  <h4>Customizable PCs</h4>
+              <div class="box wow fadeInUp" data-wow-delay="300ms">
+                  <span class="icon"><i class="fa {{#if settings.home_custom_box2_icon}}{{settings.home_custom_box2_icon}}{{else}}fa-cog{{/if}}"></i></span>
+                  <h4>{{#if settings.home_custom_box2_title}}{{settings.home_custom_box2_title}}{{else}}Customizable PCs{{/if}}</h4>
               </div>
-              <div class="box last wow fadeInUp" data-wow-delay="400ms">                
-                  <span class="icon"><i class="fa fa-star"></i></span>
-                  <h4>Rewards Program</h4>
+              <div class="box last wow fadeInUp" data-wow-delay="400ms">
+                  <span class="icon"><i class="fa {{#if settings.home_custom_box3_icon}}{{settings.home_custom_box3_icon}}{{else}}fa-star{{/if}}"></i></span>
+                  <h4>{{#if settings.home_custom_box3_title}}{{settings.home_custom_box3_title}}{{else}}Rewards Program{{/if}}</h4>
               </div>
-              <div class="box last wow fadeInUp" data-wow-delay="500ms">                
-                  <span class="icon"><i class="fa fa-rotate-left"></i></span>
-                  <h4>14-Day Free Returns</h4>
+              <div class="box last wow fadeInUp" data-wow-delay="500ms">
+                  <span class="icon"><i class="fa {{#if settings.home_custom_box4_icon}}{{settings.home_custom_box4_icon}}{{else}}fa-rotate-left{{/if}}"></i></span>
+                  <h4>{{#if settings.home_custom_box4_title}}{{settings.home_custom_box4_title}}{{else}}14-Day Free Returns{{/if}}</h4>
               </div>
-        </div>    
-    </div>    
+        </div>
+    </div>
 </div>
 <div class="halo-custom-html-block hidden-pc">
     <div class="owl-carousel" data-owl='{
@@ -64,20 +64,20 @@
         "responsiveRefreshRate": 0
      }'>
         <div class="box wow fadeInUp" data-wow-delay="200ms">
-            <span class="icon"><i class="fa fa-check"></i></span>
-            <h4>Shop with confidence</h4>
+            <span class="icon"><i class="fa {{#if settings.home_custom_box1_icon}}{{settings.home_custom_box1_icon}}{{else}}fa-check{{/if}}"></i></span>
+            <h4>{{#if settings.home_custom_box1_title}}{{settings.home_custom_box1_title}}{{else}}Shop with confidence{{/if}}</h4>
         </div>
-        <div class="box wow fadeInUp" data-wow-delay="300ms">                
-            <span class="icon"><i class="fa fa-cog"></i></span>
-            <h4>Customizable PCs</h4>
+        <div class="box wow fadeInUp" data-wow-delay="300ms">
+            <span class="icon"><i class="fa {{#if settings.home_custom_box2_icon}}{{settings.home_custom_box2_icon}}{{else}}fa-cog{{/if}}"></i></span>
+            <h4>{{#if settings.home_custom_box2_title}}{{settings.home_custom_box2_title}}{{else}}Customizable PCs{{/if}}</h4>
         </div>
-        <div class="box last wow fadeInUp" data-wow-delay="400ms">                
-            <span class="icon"><i class="fa fa-star"></i></span>
-            <h4>Rewards Program</h4>
+        <div class="box last wow fadeInUp" data-wow-delay="400ms">
+            <span class="icon"><i class="fa {{#if settings.home_custom_box3_icon}}{{settings.home_custom_box3_icon}}{{else}}fa-star{{/if}}"></i></span>
+            <h4>{{#if settings.home_custom_box3_title}}{{settings.home_custom_box3_title}}{{else}}Rewards Program{{/if}}</h4>
         </div>
-        <div class="box last wow fadeInUp" data-wow-delay="500ms">                
-            <span class="icon"><i class="fa fa-rotate-left"></i></span>
-            <h4>14-Day Free Returns</h4>
+        <div class="box last wow fadeInUp" data-wow-delay="500ms">
+            <span class="icon"><i class="fa {{#if settings.home_custom_box4_icon}}{{settings.home_custom_box4_icon}}{{else}}fa-rotate-left{{/if}}"></i></span>
+            <h4>{{#if settings.home_custom_box4_title}}{{settings.home_custom_box4_title}}{{else}}14-Day Free Returns{{/if}}</h4>
         </div>
     </div>
 </div>

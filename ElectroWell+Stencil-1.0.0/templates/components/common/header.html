@@ -1,16 +1,20 @@
 <header class="header" role="banner">
 
     <!-- Begin Top Bar Promotion -->
-    <div class="header-top hide" id="top-bar-promotion">
-        <a href="#" title=""><img src="/product_images/uploaded_images/top-bar-promotion.png" title="top-bar-promotion"></a>
+    {{#if settings.show_top_bar_promotion}}
+    <div class="header-top" id="top-bar-promotion">
+        <a href="{{#if settings.top_bar_promotion_link}}{{settings.top_bar_promotion_link}}{{else}}#{{/if}}" title="">
+            <img src="{{#if settings.top_bar_promotion_image}}{{settings.top_bar_promotion_image}}{{else}}/product_images/uploaded_images/top-bar-promotion.png{{/if}}" title="top-bar-promotion">
+        </a>
         <a href="javascript:void(0)" class="close"><svg><use xlink:href="#icon-close"></use></svg></a>
     </div>
+    {{/if}}
     <!-- End Top Bar Promotion -->
 
     <div class="header-top">
         <div class="row">
             <div class="col-left col-sm-4">
-                <p> <a href="#" title="Detail">Free International Shipping. No Minimum Purchase Required*<span>Detail</span></a></p>
+                <p> <a href="{{#if settings.header_free_shipping_link}}{{settings.header_free_shipping_link}}{{else}}#{{/if}}" title="{{#if settings.header_free_shipping_detail}}{{settings.header_free_shipping_detail}}{{else}}Detail{{/if}}">{{#if settings.header_free_shipping_text}}{{settings.header_free_shipping_text}}{{else}}Free International Shipping. No Minimum Purchase Required*{{/if}}<span>{{#if settings.header_free_shipping_detail}}{{settings.header_free_shipping_detail}}{{else}}Detail{{/if}}</span></a></p>
             </div>
             <div class="col-right col-sm-8 hidden-xs">
                 {{> components/common/navigation}}
