@@ -1,0 +1,200 @@
+// Request Quote Modal and Zero Price Product Styles
+
+// Request Quote Modal
+.request-quote-modal {
+    .modal-body {
+        padding: 30px;
+    }
+
+    .form-field {
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        font-weight: 600;
+        margin-bottom: 8px;
+        display: block;
+
+        small {
+            color: #d9534f;
+            font-weight: normal;
+        }
+    }
+
+    .form-input,
+    textarea.form-input {
+        width: 100%;
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            outline: none;
+            border-color: #5cb85c;
+            box-shadow: 0 0 5px rgba(92, 184, 92, 0.3);
+        }
+    }
+
+    textarea.form-input {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .form-actions {
+        margin-top: 25px;
+        text-align: right;
+
+        .btn {
+            min-width: 150px;
+        }
+    }
+
+    .alertBox {
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+
+        &--success {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        &--error {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+
+        .alertBox-icon {
+            margin-right: 15px;
+            flex-shrink: 0;
+
+            svg {
+                width: 24px;
+                height: 24px;
+                fill: currentColor;
+            }
+        }
+
+        .alertBox-message {
+            margin: 0;
+            flex: 1;
+        }
+    }
+}
+
+// Request Quote Button
+.btn-request-quote {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    color: #fff;
+
+    &:hover {
+        background-color: #449d44;
+        border-color: #398439;
+        color: #fff;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(92, 184, 92, 0.5);
+    }
+}
+
+// Disabled Add to Cart Button for Zero Price Products
+.btn-disabled {
+    background-color: #ccc !important;
+    border-color: #ccc !important;
+    color: #666 !important;
+    cursor: not-allowed !important;
+    opacity: 0.6;
+    pointer-events: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: #ccc !important;
+        border-color: #ccc !important;
+        color: #666 !important;
+        box-shadow: none !important;
+    }
+}
+
+// Product Card - Zero Price Styling
+.card {
+    .btn-disabled {
+        margin-top: 10px;
+    }
+
+    .btn-request-quote {
+        margin-bottom: 5px;
+    }
+}
+
+// Product View - Zero Price Styling
+.productView-zeroPrice {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+
+    .productView-zeroPrice-message {
+        margin-bottom: 15px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .btn {
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .request-quote-modal {
+        .modal-body {
+            padding: 20px;
+        }
+
+        .form-actions {
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+
+    .productView-zeroPrice {
+        padding: 15px;
+
+        .btn {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// Hide price for zero-priced products
+.prod-price:empty {
+    display: none;
+}
+
+.productView-price:empty {
+    display: none;
+}

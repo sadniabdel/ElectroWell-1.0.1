@@ -1,0 +1,87 @@
+<div id="request-quote-modal" class="modal modal--medium request-quote-modal" data-reveal>
+    <div class="modal-header">
+        <h2 class="modal-header-title">{{lang 'products.request_quote.title'}}</h2>
+        <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button">
+            <span aria-hidden="true">&#215;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        <form id="request-quote-form" class="form" method="post" action="#" data-request-quote-form>
+            <div class="alertBox alertBox--success request-quote-success" style="display:none">
+                <div class="alertBox-column alertBox-icon">
+                    <icon glyph="ic-success" class="icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </icon>
+                </div>
+                <p class="alertBox-column alertBox-message">{{lang 'products.request_quote.success'}}</p>
+            </div>
+            <div class="alertBox alertBox--error request-quote-error" style="display:none">
+                <div class="alertBox-column alertBox-icon">
+                    <icon glyph="ic-error" class="icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                        </svg>
+                    </icon>
+                </div>
+                <p class="alertBox-column alertBox-message"></p>
+            </div>
+
+            <input type="hidden" name="product_id" id="quote-product-id" value="">
+            <input type="hidden" name="product_name" id="quote-product-name" value="">
+
+            <div class="form-field">
+                <label class="form-label" for="quote_fullname">
+                    {{lang 'forms.contact_us.full_name'}}
+                    <small>{{lang 'common.required'}}</small>
+                </label>
+                <input class="form-input" type="text" id="quote_fullname" name="quote_fullname" required>
+            </div>
+
+            <div class="form-field">
+                <label class="form-label" for="quote_email">
+                    {{lang 'forms.contact_us.email'}}
+                    <small>{{lang 'common.required'}}</small>
+                </label>
+                <input class="form-input" type="email" id="quote_email" name="quote_email" required>
+            </div>
+
+            <div class="form-field">
+                <label class="form-label" for="quote_phone">
+                    {{lang 'forms.contact_us.phone'}}
+                </label>
+                <input class="form-input" type="tel" id="quote_phone" name="quote_phone">
+            </div>
+
+            <div class="form-field">
+                <label class="form-label" for="quote_company">
+                    {{lang 'forms.contact_us.company'}}
+                </label>
+                <input class="form-input" type="text" id="quote_company" name="quote_company">
+            </div>
+
+            <div class="form-field">
+                <label class="form-label" for="quote_quantity">
+                    {{lang 'products.quantity'}}
+                    <small>{{lang 'common.required'}}</small>
+                </label>
+                <input class="form-input" type="number" id="quote_quantity" name="quote_quantity" min="1" value="1" required>
+            </div>
+
+            <div class="form-field">
+                <label class="form-label" for="quote_message">
+                    {{lang 'forms.contact_us.question'}}
+                    <small>{{lang 'common.required'}}</small>
+                </label>
+                <textarea name="quote_message" id="quote_message" rows="5" class="form-input" required></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button class="btn btn-primary" type="submit">
+                    {{lang 'products.request_quote.submit'}}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

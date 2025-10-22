@@ -51,6 +51,8 @@ import HaloCatalogCategorySearch  from './halothemes/halo-catalog-category-searc
 
 import halothemesRecentlyBought from './halothemes/halothemes_RecentlyBought';
 
+import RequestQuote from './common/request-quote';
+
 function fastClick(element) {
     return new FastClick(element);
 }
@@ -80,6 +82,7 @@ export default class Global extends PageManager {
         privacyCookieNotification();
         maintenanceMode(this.context.maintenanceMode);
         loadingProgressBar();
+        new RequestQuote(); // Initialize Request Quote functionality
         next();
         halothemesRecentlyBought(this.context);
     }

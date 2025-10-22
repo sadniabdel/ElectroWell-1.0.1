@@ -657,6 +657,14 @@
             "percent": "and get {discount} off",
             "price": "and get {discount} off",
             "fixed": "and pay only {discount} each"
+        },
+        "request_quote": {
+            "title": "Request a Quote",
+            "button": "Request a Quote",
+            "message": "This product is available by quote only. Please submit a quote request and we'll get back to you shortly.",
+            "submit": "Submit Request",
+            "success": "Thank you! Your quote request has been submitted successfully. We will contact you shortly.",
+            "error": "Sorry, there was an error submitting your request. Please try again."
         }
     },
     "invoice": {
