@@ -7,28 +7,29 @@ jQuery(document).ready(function($) {
     //bottomCates: '<div class="own-text"><p>free shipping in the u.s. & internationally</p></div>'
 
     menuItem(2).HaloMegaMenu({
-        dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
-        dropWidth: '700px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
-        dropType: 'noImage',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
-        imageAreaWidth: '',    // width of images area
-        cateAreaWidth: '100%',     // width of categories area
-        cateColumns: 3,           // columns of categories area - max 5 columns
+        dropAlign: '{{#if theme_settings.megamenu_style}}{{#if theme_settings.megamenu_style '===' 'full_width'}}fullWidth{{else}}left{{/if}}{{else}}left{{/if}}',
+        dropWidth: '700px',
+        dropType: '{{#if theme_settings.megamenu_style}}{{#if theme_settings.megamenu_style '===' 'with_images'}}imageLeft{{else}}noImage{{/if}}{{else}}noImage{{/if}}',
+        imageAreaWidth: '',
+        cateAreaWidth: '100%',
+        cateColumns: 3,
         addclass_special: 'position_image_right'
     });
     menuItem(3).HaloMegaMenu({
-        dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
-        dropWidth: '900px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
-        dropType: 'imageTop',     // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
-        imageAreaWidth: '',     // width of images area
-        cateAreaWidth: '100%',    // width of categories area
-        cateColumns: 4,           // columns of categories area - max 5 columns
-        // contents for images column (HTML supported)
-        imagesTop: ['<a href="#placeholder_link"><img src="/product_images/uploaded_images/image-menu-1.png"/></a>',
-            '<a href="#placeholder_link"><img src="/product_images/uploaded_images/image-menu-2.png"/></a>',
-            '<a href="#placeholder_link"><img src="/product_images/uploaded_images/image-menu-3.png"/></a>',
-            '<a href="#placeholder_link"><img src="/product_images/uploaded_images/image-menu-4.png"/></a>'
+        dropAlign: '{{#if theme_settings.megamenu_style}}{{#if theme_settings.megamenu_style '===' 'full_width'}}fullWidth{{else}}left{{/if}}{{else}}left{{/if}}',
+        dropWidth: '900px',
+        dropType: 'imageTop',
+        imageAreaWidth: '',
+        cateAreaWidth: '100%',
+        cateColumns: 4,
+        // Featured images - customizable via Theme Editor
+        imagesTop: [
+            {{#if theme_settings.megamenu_featured_image1}}'<a href="{{theme_settings.megamenu_featured_link1}}"><img src="{{theme_settings.megamenu_featured_image1}}" alt="{{theme_settings.megamenu_featured_alt1}}"/></a>',{{/if}}
+            {{#if theme_settings.megamenu_featured_image2}}'<a href="{{theme_settings.megamenu_featured_link2}}"><img src="{{theme_settings.megamenu_featured_image2}}" alt="{{theme_settings.megamenu_featured_alt2}}"/></a>'{{/if}}
         ],
-        bottomCates: '<div class="image_brand"><div class="title"><label>Popular Brands</label><a href="/brands/">View All Brands</a></div><div class="Brand-Image"><ul><li class=""><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-1.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-2.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-3.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-4.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-5.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-6.png"></a></li></ul></div></div>'
+        {{#if theme_settings.megamenu_custom_html_enabled}}
+        bottomCates: '{{theme_settings.megamenu_custom_html}}'
+        {{/if}}
     });
 });
 </script>

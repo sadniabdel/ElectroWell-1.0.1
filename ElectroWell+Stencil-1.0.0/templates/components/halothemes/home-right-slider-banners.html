@@ -1,9 +1,24 @@
+{{#if theme_settings.home_right_banners_enabled}}
 <div id="homeRightSlideBanners">
-	<!-- Begin Banners -->
-	<div class="banner-item wow fadeInUp animated" data-wow-delay="100ms">		
-		<a title="Bundle" href="#placeholder_link" class="imgAnimation">
-			<img src="/product_images/uploaded_images/right-slide-banner.jpg" alt="Bundle" />
-		</a>
-	</div>
-	<!-- End Banners -->     
+	<!-- Begin Banners - Customizable via Theme Editor -->
+	{{#if theme_settings.home_right_banner_html}}
+		{{{theme_settings.home_right_banner_html}}}
+	{{else}}
+		{{#if theme_settings.home_right_banner1_image}}
+		<div class="banner-item wow fadeInUp animated" data-wow-delay="100ms">
+			<a title="{{theme_settings.home_right_banner1_alt}}" href="{{theme_settings.home_right_banner1_link}}" class="imgAnimation">
+				<img src="{{theme_settings.home_right_banner1_image}}" alt="{{theme_settings.home_right_banner1_alt}}" />
+			</a>
+		</div>
+		{{/if}}
+		{{#if theme_settings.home_right_banner2_image}}
+		<div class="banner-item wow fadeInUp animated" data-wow-delay="200ms">
+			<a title="{{theme_settings.home_right_banner2_alt}}" href="{{theme_settings.home_right_banner2_link}}" class="imgAnimation">
+				<img src="{{theme_settings.home_right_banner2_image}}" alt="{{theme_settings.home_right_banner2_alt}}" />
+			</a>
+		</div>
+		{{/if}}
+	{{/if}}
+	<!-- End Banners -->
 </div>
+{{/if}}

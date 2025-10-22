@@ -1,7 +1,11 @@
+{{#if theme_settings.home_brand_slider_enabled}}
 <div class="container">
    <div id="homeBrands">
+        {{#if theme_settings.home_brand_slider_heading}}
+        <h2 class="module-heading">{{theme_settings.home_brand_slider_heading}}</h2>
+        {{/if}}
         <div class="owl-carousel" data-owl='{
-            "items": 5,
+            "items": {{#if theme_settings.home_brand_slider_count}}{{theme_settings.home_brand_slider_count}}{{else}}5{{/if}},
             "nav": true,
             "dots": false,
             "slideBy": 5,
@@ -42,3 +46,4 @@
         </div>
     </div>
 </div>
+{{/if}}

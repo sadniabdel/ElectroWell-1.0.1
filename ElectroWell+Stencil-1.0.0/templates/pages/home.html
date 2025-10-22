@@ -15,16 +15,21 @@ blog:
     {{{region name="home_below_menu"}}}
     <div class="container hl-slideshow-banner">
         <div class="row">
-            {{#if theme_settings.home_slide_show_style '===' 'box'}}
+            {{#if theme_settings.home_slideshow_mode '===' 'split'}}
                 <div class="has-slideshow col-sm-8">
                     {{> components/carousel}}
                 </div>
                 <div class="has-banner col-sm-4">
                     {{> components/halothemes/home-right-slider-banners}}
                 </div>
-            {{else}}
+            {{else if theme_settings.home_slideshow_mode '===' 'wide'}}
                 <div class="col-sm-12">
-                {{> components/carousel}}
+                    {{> components/carousel}}
+                </div>
+            {{else}}
+                {{!-- Default: box layout --}}
+                <div class="col-sm-12">
+                    {{> components/carousel}}
                 </div>
             {{/if}}
         </div>

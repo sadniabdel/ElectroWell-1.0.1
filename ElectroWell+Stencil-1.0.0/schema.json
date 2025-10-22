@@ -1832,5 +1832,590 @@
         ]
       }
     ]
+  },
+  {
+    "name": "Header & Top Bar",
+    "settings": [
+      {
+        "type": "heading",
+        "content": "Top Bar Promotion Banner"
+      },
+      {
+        "type": "checkbox",
+        "label": "Enable Top Bar Promotion",
+        "id": "topbar_promotion_enabled",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Top Bar Promotion Image URL",
+        "id": "topbar_promotion_image",
+        "description": "Upload image to WebDAV /content/ folder, then enter: /content/your-image.png"
+      },
+      {
+        "type": "text",
+        "label": "Top Bar Promotion Link URL",
+        "id": "topbar_promotion_link"
+      },
+      {
+        "type": "heading",
+        "content": "Header Top Message"
+      },
+      {
+        "type": "checkbox",
+        "label": "Enable Free Shipping Message",
+        "id": "header_freeshipping_enabled",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Free Shipping Message",
+        "id": "header_freeshipping_text",
+        "default": "Free International Shipping. No Minimum Purchase Required*"
+      },
+      {
+        "type": "text",
+        "label": "Free Shipping Detail Link",
+        "id": "header_freeshipping_link",
+        "default": "/shipping"
+      },
+      {
+        "type": "heading",
+        "content": "Header Phone Number"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show Phone Number in Header",
+        "id": "header_phone_enabled",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Phone Number",
+        "id": "header_phone_number",
+        "default": "1-800-123-4567"
+      },
+      {
+        "type": "text",
+        "label": "Phone Label Text",
+        "id": "header_phone_label",
+        "default": "Customer Service"
+      },
+      {
+        "type": "heading",
+        "content": "Need Help Link"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show 'Need Help?' Link",
+        "id": "header_needhelp_enabled",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "'Need Help?' Link URL",
+        "id": "header_needhelp_link",
+        "default": "/contact-us"
+      },
+      {
+        "type": "text",
+        "label": "'Need Help?' Link Text",
+        "id": "header_needhelp_text",
+        "default": "Need Help?"
+      }
+    ]
+  },
+  {
+    "name": "Megamenu Settings",
+    "settings": [
+      {
+        "type": "heading",
+        "content": "Megamenu Style Options"
+      },
+      {
+        "type": "select",
+        "label": "Megamenu Display Style",
+        "id": "megamenu_style",
+        "force_reload": true,
+        "options": [
+          {
+            "value": "standard",
+            "label": "Standard (Text Only)"
+          },
+          {
+            "value": "with_images",
+            "label": "With Category Images"
+          },
+          {
+            "value": "full_width",
+            "label": "Full Width with Products"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "Megamenu Featured Image 1"
+      },
+      {
+        "type": "text",
+        "label": "Featured Image 1 URL",
+        "id": "megamenu_featured_image1",
+        "description": "Upload to /content/ folder. Example: /content/menu-feature-1.jpg"
+      },
+      {
+        "type": "text",
+        "label": "Featured Image 1 Link",
+        "id": "megamenu_featured_link1"
+      },
+      {
+        "type": "text",
+        "label": "Featured Image 1 Alt Text",
+        "id": "megamenu_featured_alt1"
+      },
+      {
+        "type": "heading",
+        "content": "Megamenu Featured Image 2"
+      },
+      {
+        "type": "text",
+        "label": "Featured Image 2 URL",
+        "id": "megamenu_featured_image2"
+      },
+      {
+        "type": "text",
+        "label": "Featured Image 2 Link",
+        "id": "megamenu_featured_link2"
+      },
+      {
+        "type": "text",
+        "label": "Featured Image 2 Alt Text",
+        "id": "megamenu_featured_alt2"
+      },
+      {
+        "type": "heading",
+        "content": "Megamenu Custom HTML"
+      },
+      {
+        "type": "checkbox",
+        "label": "Enable Custom HTML Block",
+        "id": "megamenu_custom_html_enabled",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Custom HTML Content",
+        "id": "megamenu_custom_html",
+        "description": "Add custom HTML for special promotions"
+      }
+    ]
+  },
+  {
+    "name": "Homepage Content",
+    "settings": [
+      {
+        "type": "heading",
+        "content": "Homepage Slideshow"
+      },
+      {
+        "type": "select",
+        "label": "Slideshow Display Mode",
+        "id": "home_slideshow_mode",
+        "force_reload": true,
+        "options": [
+          {
+            "value": "box",
+            "label": "Boxed Layout"
+          },
+          {
+            "value": "wide",
+            "label": "Full Width"
+          },
+          {
+            "value": "split",
+            "label": "Split with Sidebar Banners"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "content": "Header Custom HTML Block"
+      },
+      {
+        "type": "checkbox",
+        "label": "Enable Header HTML Block",
+        "id": "home_header_html_enabled",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Header HTML Content",
+        "id": "home_header_html",
+        "description": "Custom HTML for homepage header (announcements, promos, etc.)"
+      },
+      {
+        "type": "heading",
+        "content": "Right Sidebar Banners"
+      },
+      {
+        "type": "checkbox",
+        "label": "Enable Right Sidebar Banners",
+        "id": "home_right_banners_enabled",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Banner 1 Image URL",
+        "id": "home_right_banner1_image"
+      },
+      {
+        "type": "text",
+        "label": "Banner 1 Link",
+        "id": "home_right_banner1_link"
+      },
+      {
+        "type": "text",
+        "label": "Banner 1 Alt Text",
+        "id": "home_right_banner1_alt"
+      },
+      {
+        "type": "text",
+        "label": "Banner 2 Image URL",
+        "id": "home_right_banner2_image"
+      },
+      {
+        "type": "text",
+        "label": "Banner 2 Link",
+        "id": "home_right_banner2_link"
+      },
+      {
+        "type": "text",
+        "label": "Banner 2 Alt Text",
+        "id": "home_right_banner2_alt"
+      },
+      {
+        "type": "text",
+        "label": "Custom HTML Instead of Images",
+        "id": "home_right_banner_html",
+        "description": "If filled, this HTML will replace the banner images"
+      },
+      {
+        "type": "heading",
+        "content": "Shop by Category Section"
+      },
+      {
+        "type": "checkbox",
+        "label": "Enable Shop by Category",
+        "id": "home_shop_category_enabled",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Section Heading",
+        "id": "home_shop_category_heading",
+        "default": "Shop by Category"
+      },
+      {
+        "type": "text",
+        "label": "Category 1 Image URL",
+        "id": "home_category1_image"
+      },
+      {
+        "type": "text",
+        "label": "Category 1 Link",
+        "id": "home_category1_link"
+      },
+      {
+        "type": "text",
+        "label": "Category 1 Title",
+        "id": "home_category1_title"
+      },
+      {
+        "type": "text",
+        "label": "Category 2 Image URL",
+        "id": "home_category2_image"
+      },
+      {
+        "type": "text",
+        "label": "Category 2 Link",
+        "id": "home_category2_link"
+      },
+      {
+        "type": "text",
+        "label": "Category 2 Title",
+        "id": "home_category2_title"
+      },
+      {
+        "type": "text",
+        "label": "Category 3 Image URL",
+        "id": "home_category3_image"
+      },
+      {
+        "type": "text",
+        "label": "Category 3 Link",
+        "id": "home_category3_link"
+      },
+      {
+        "type": "text",
+        "label": "Category 3 Title",
+        "id": "home_category3_title"
+      },
+      {
+        "type": "text",
+        "label": "Category 4 Image URL",
+        "id": "home_category4_image"
+      },
+      {
+        "type": "text",
+        "label": "Category 4 Link",
+        "id": "home_category4_link"
+      },
+      {
+        "type": "text",
+        "label": "Category 4 Title",
+        "id": "home_category4_title"
+      },
+      {
+        "type": "heading",
+        "content": "Middle Banner"
+      },
+      {
+        "type": "checkbox",
+        "label": "Enable Middle Banner",
+        "id": "home_middle_banner_enabled",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Banner Image URL",
+        "id": "home_middle_banner_image"
+      },
+      {
+        "type": "text",
+        "label": "Banner Link",
+        "id": "home_middle_banner_link"
+      },
+      {
+        "type": "text",
+        "label": "Banner Alt Text",
+        "id": "home_middle_banner_alt"
+      },
+      {
+        "type": "heading",
+        "content": "Brand Slider"
+      },
+      {
+        "type": "checkbox",
+        "label": "Enable Brand Slider",
+        "id": "home_brand_slider_enabled",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Section Heading",
+        "id": "home_brand_slider_heading",
+        "default": "Shop by Brand"
+      },
+      {
+        "type": "select",
+        "label": "Number of Brands to Show",
+        "id": "home_brand_slider_count",
+        "force_reload": true,
+        "options": [
+          {
+            "value": 4,
+            "label": "4 Brands"
+          },
+          {
+            "value": 6,
+            "label": "6 Brands"
+          },
+          {
+            "value": 8,
+            "label": "8 Brands"
+          },
+          {
+            "value": 10,
+            "label": "10 Brands"
+          },
+          {
+            "value": 12,
+            "label": "12 Brands"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Footer Content",
+    "settings": [
+      {
+        "type": "heading",
+        "content": "Footer Column 1"
+      },
+      {
+        "type": "text",
+        "label": "Column 1 Heading",
+        "id": "footer_col1_heading",
+        "default": "About Us"
+      },
+      {
+        "type": "text",
+        "label": "Column 1 Content (HTML)",
+        "id": "footer_col1_content",
+        "description": "Can include HTML for links, images, etc."
+      },
+      {
+        "type": "heading",
+        "content": "Footer Column 2"
+      },
+      {
+        "type": "text",
+        "label": "Column 2 Heading",
+        "id": "footer_col2_heading",
+        "default": "Customer Service"
+      },
+      {
+        "type": "text",
+        "label": "Column 2 Content (HTML)",
+        "id": "footer_col2_content"
+      },
+      {
+        "type": "heading",
+        "content": "Footer Column 3"
+      },
+      {
+        "type": "text",
+        "label": "Column 3 Heading",
+        "id": "footer_col3_heading",
+        "default": "My Account"
+      },
+      {
+        "type": "text",
+        "label": "Column 3 Content (HTML)",
+        "id": "footer_col3_content"
+      },
+      {
+        "type": "heading",
+        "content": "Footer Contact Info"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show Contact Info in Footer",
+        "id": "footer_contact_enabled",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Contact Info Heading",
+        "id": "footer_contact_heading",
+        "default": "Contact Us"
+      },
+      {
+        "type": "text",
+        "label": "Store Address",
+        "id": "footer_address"
+      },
+      {
+        "type": "text",
+        "label": "Contact Email",
+        "id": "footer_email"
+      },
+      {
+        "type": "text",
+        "label": "Contact Phone",
+        "id": "footer_phone"
+      },
+      {
+        "type": "heading",
+        "content": "Footer Logo"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show Footer Logo",
+        "id": "footer_logo_enabled",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Footer Logo Image URL",
+        "id": "footer_logo_image",
+        "description": "If empty, will use main store logo"
+      },
+      {
+        "type": "heading",
+        "content": "Footer Social Media"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show Social Media Icons",
+        "id": "footer_social_enabled",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Facebook URL",
+        "id": "social_icon_facebook"
+      },
+      {
+        "type": "text",
+        "label": "Twitter URL",
+        "id": "social_icon_twitter"
+      },
+      {
+        "type": "text",
+        "label": "Instagram URL",
+        "id": "social_icon_instagram"
+      },
+      {
+        "type": "text",
+        "label": "Pinterest URL",
+        "id": "social_icon_pinterest"
+      },
+      {
+        "type": "text",
+        "label": "YouTube URL",
+        "id": "social_icon_youtube"
+      },
+      {
+        "type": "text",
+        "label": "LinkedIn URL",
+        "id": "social_icon_linkedin"
+      },
+      {
+        "type": "heading",
+        "content": "Footer Payment Icons"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show Payment Icons",
+        "id": "footer_payment_icons_enabled",
+        "force_reload": true
+      },
+      {
+        "type": "checkbox",
+        "label": "Show Visa",
+        "id": "show_accept_visa"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show Mastercard",
+        "id": "show_accept_mastercard"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show American Express",
+        "id": "show_accept_amex"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show PayPal",
+        "id": "show_accept_paypal"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show Discover",
+        "id": "show_accept_discover"
+      }
+    ]
   }
 ]

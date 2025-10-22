@@ -2,11 +2,20 @@
 {{> components/halothemes/home-brand-slider}}
 <!-- END Home Brand Slider -->
 <footer id="footer-wrapper">
+    {{#if theme_settings.footer_contact_enabled}}
     <div class="footerInfo">
         <div class="container">
-            <p>Need help? We're available at <span>1800-000-6890</span> - Email us at <a href="mailto:service@domain.com" title="service@domain.com">service@domain.com</a> or <a href="#" title="Live Help" class="link">Live Help</a></p>
+            <p>{{theme_settings.footer_contact_heading}}
+                {{#if theme_settings.footer_phone}}
+                <span>{{theme_settings.footer_phone}}</span>
+                {{/if}}
+                {{#if theme_settings.footer_email}}
+                - Email us at <a href="mailto:{{theme_settings.footer_email}}" title="{{theme_settings.footer_email}}">{{theme_settings.footer_email}}</a>
+                {{/if}}
+            </p>
         </div>
     </div>
+    {{/if}}
     <div class="middle-footer">
         <!-- <div class="container themevale_service">
             <div class="col-sm-3">
@@ -67,7 +76,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-1 col-sm-2">
-                    <h5>Further Info.</h5>
+                    <h5>{{theme_settings.footer_col1_heading}}</h5>
+                    {{#if theme_settings.footer_col1_content}}
+                        {{{theme_settings.footer_col1_content}}}
+                    {{else}}
                     <ul>
                         <li><a href="/blog/">Blog</a></li>
                         <li><a href="/about-us/">About Us</a></li>
@@ -78,9 +90,13 @@
                         <li><a href="/contact-us/">Contact Us</a></li>
                         <li><a href="#">Testimonials</a></li>
                     </ul>
+                    {{/if}}
                 </div>
                 <div class="col-2 col-sm-2">
-                    <h5>Customer Service</h5>
+                    <h5>{{theme_settings.footer_col2_heading}}</h5>
+                    {{#if theme_settings.footer_col2_content}}
+                        {{{theme_settings.footer_col2_content}}}
+                    {{else}}
                     <ul>
                         <li><a href="#">Help & FAQs</a></li>
                         <li><a href="#">Terms of Conditions</a></li>
@@ -90,9 +106,13 @@
                         <li><a href="#">Rebate Center</a></li>
                         <li><a href="#">Partners</a></li>
                     </ul>
+                    {{/if}}
                 </div>
-                <div class="col-3 col-sm-2">                   
-                    <h5>Shop</h5>
+                <div class="col-3 col-sm-2">
+                    <h5>{{theme_settings.footer_col3_heading}}</h5>
+                    {{#if theme_settings.footer_col3_content}}
+                        {{{theme_settings.footer_col3_content}}}
+                    {{else}}
                     <ul>
                         {{#each categories}}
                         <li>
@@ -100,6 +120,7 @@
                         </li>
                         {{/each}}
                     </ul>
+                    {{/if}}
                 </div>
                 <div class="col-4 col-sm-2"> 
                     <h5>Brands</h5>
@@ -136,15 +157,27 @@
                         </div>
                     {{/if}}
                 </div>
+                {{#if theme_settings.footer_payment_icons_enabled}}
                 <div class="footer-payment col-sm-6">
                     <p>
-                        <a title="Skrill" href="#"><img src="/product_images/uploaded_images/skrill.png" alt="Skrill"></a>
-                        <a title="Paypal" href="#"><img src="/product_images/uploaded_images/paypal.png" alt="Paypal"></a>
+                        {{#if theme_settings.show_accept_visa}}
                         <a title="Visa" href="#"><img src="/product_images/uploaded_images/visa.png" alt="Visa"></a>
-                        <a title="Express" href="#"><img src="/product_images/uploaded_images/american.png" alt="Express"></a>
+                        {{/if}}
+                        {{#if theme_settings.show_accept_mastercard}}
                         <a title="Master Card" href="#"><img src="/product_images/uploaded_images/mastercard.png" alt="Master Card"></a>
+                        {{/if}}
+                        {{#if theme_settings.show_accept_amex}}
+                        <a title="American Express" href="#"><img src="/product_images/uploaded_images/american.png" alt="American Express"></a>
+                        {{/if}}
+                        {{#if theme_settings.show_accept_paypal}}
+                        <a title="Paypal" href="#"><img src="/product_images/uploaded_images/paypal.png" alt="Paypal"></a>
+                        {{/if}}
+                        {{#if theme_settings.show_accept_discover}}
+                        <a title="Discover" href="#"><img src="/product_images/uploaded_images/discover.png" alt="Discover"></a>
+                        {{/if}}
                     </p>
                 </div>
+                {{/if}}
             </div>
         </div>
     </div>
