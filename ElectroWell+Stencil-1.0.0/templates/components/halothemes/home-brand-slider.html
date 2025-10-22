@@ -29,16 +29,24 @@
             },
             "responsiveRefreshRate": 0
          }'>
-            <a href="#" title="loremous"><img src="/product_images/uploaded_images/brands-1.jpg" alt="loremous" /></a>
-            <a href="#" title="isabella"><img src="/product_images/uploaded_images/brands-2.jpg" alt="isabella" /></a>
-            <a href="#" title="magcor"><img src="/product_images/uploaded_images/brands-3.jpg" alt="magcor" /></a>
-            <a href="#" title="fermends"><img src="/product_images/uploaded_images/brands-4.jpg" alt="fermends" /></a>
-            <a href="#" title="conseqaur"><img src="/product_images/uploaded_images/brands-5.jpg" alt="conseqaur" /></a>
-            <a href="#" title="loremous"><img src="/product_images/uploaded_images/brands-1.jpg" alt="loremous" /></a>
-            <a href="#" title="isabella"><img src="/product_images/uploaded_images/brands-2.jpg" alt="isabella" /></a>
-            <a href="#" title="magcor"><img src="/product_images/uploaded_images/brands-3.jpg" alt="magcor" /></a>
-            <a href="#" title="fermends"><img src="/product_images/uploaded_images/brands-4.jpg" alt="fermends" /></a>
-            <a href="#" title="conseqaur"><img src="/product_images/uploaded_images/brands-5.jpg" alt="conseqaur" /></a>
-        </div>
+            {{#if theme_settings.home_brand_slider_item1_image}}
+            <a href="{{theme_settings.home_brand_slider_item1_link}}" title="{{theme_settings.home_brand_slider_item1_alt}}"><img src="{{theme_settings.home_brand_slider_item1_image}}" alt="{{theme_settings.home_brand_slider_item1_alt}}" /></a>
+            {{/if}}
+            {{#if theme_settings.home_brand_slider_item2_image}}
+            <a href="{{theme_settings.home_brand_slider_item2_link}}" title="{{theme_settings.home_brand_slider_item2_alt}}"><img src="{{theme_settings.home_brand_slider_item2_image}}" alt="{{theme_settings.home_brand_slider_item2_alt}}" /></a>
+            {{/if}}
+            {{#if theme_settings.home_brand_slider_item3_image}}
+            <a href="{{theme_settings.home_brand_slider_item3_link}}" title="{{theme_settings.home_brand_slider_item3_alt}}"><img src="{{theme_settings.home_brand_slider_item3_image}}" alt="{{theme_settings.home_brand_slider_item3_alt}}" /></a>
+            {{/if}}
+            {{#if theme_settings.home_brand_slider_item4_image}}
+            <a href="{{theme_settings.home_brand_slider_item4_link}}" title="{{theme_settings.home_brand_slider_item4_alt}}"><img src="{{theme_settings.home_brand_slider_item4_image}}" alt="{{theme_settings.home_brand_slider_item4_alt}}" /></a>
+            {{/if}}
+            {{#if theme_settings.home_brand_slider_item5_image}}
+            <a href="{{theme_settings.home_brand_slider_item5_link}}" title="{{theme_settings.home_brand_slider_item5_alt}}"><img src="{{theme_settings.home_brand_slider_item5_image}}" alt="{{theme_settings.home_brand_slider_item5_alt}}" /></a>
+            {{/if}}
+            {{#if theme_settings.home_brand_slider_item6_image}}
+            <a href="{{theme_settings.home_brand_slider_item6_link}}" title="{{theme_settings.home_brand_slider_item6_alt}}"><img src="{{theme_settings.home_brand_slider_item6_image}}" alt="{{theme_settings.home_brand_slider_item6_alt}}" /></a>
+            {{/if}}
+         </div>
     </div>
 </div>

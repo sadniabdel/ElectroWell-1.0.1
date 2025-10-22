@@ -644,6 +644,75 @@
       },
       {
         "type": "heading",
+        "content": "Top Bar Promotion"
+      },
+      {
+        "type": "checkbox",
+        "label": "Enable top bar promotion",
+        "id": "top_bar_promo_enabled",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Promotion image URL",
+        "id": "top_bar_promo_image_url"
+      },
+      {
+        "type": "text",
+        "label": "Promotion link URL",
+        "id": "top_bar_promo_link"
+      },
+      {
+        "type": "text",
+        "label": "Promotion image alt text",
+        "id": "top_bar_promo_alt_text"
+      },
+      {
+        "type": "text",
+        "label": "Promotion message text",
+        "id": "top_bar_message_text"
+      },
+      {
+        "type": "text",
+        "label": "Promotion detail label",
+        "id": "top_bar_message_detail_text"
+      },
+      {
+        "type": "text",
+        "label": "Promotion detail link URL",
+        "id": "top_bar_message_link_url"
+      },
+      {
+        "type": "text",
+        "label": "Promotion detail link title",
+        "id": "top_bar_message_link_title"
+      },
+      {
+        "type": "heading",
+        "content": "Header Contact"
+      },
+      {
+        "type": "text",
+        "label": "Phone label",
+        "id": "header_phone_label"
+      },
+      {
+        "type": "text",
+        "label": "Help link text",
+        "id": "header_help_text"
+      },
+      {
+        "type": "text",
+        "label": "Help link URL",
+        "id": "header_help_url"
+      },
+      {
+        "type": "text",
+        "label": "Help link title",
+        "id": "header_help_title"
+      },
+      {
+        "type": "heading",
         "content": "Custom Text"
       },
       {
@@ -705,6 +774,22 @@
             "label": "Specify dimensions"
           }
         ]
+      },
+      {
+        "type": "checkbox",
+        "label": "Use custom logo URL",
+        "id": "logo_use_custom_url",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Custom logo URL",
+        "id": "logo_custom_url"
+      },
+      {
+        "type": "text",
+        "label": "Custom logo alt text",
+        "id": "logo_custom_alt"
       }
     ]
   },
@@ -779,6 +864,321 @@
         "type": "color",
         "label": "Dropdown text hover color",
         "id": "navPages-subMenu-hover-textColor"
+      },
+      {
+        "type": "heading",
+        "content": "Mega Menu Item 2"
+      },
+      {
+        "type": "select",
+        "label": "Dropdown alignment",
+        "id": "mega_menu_item2_align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "fullWidth",
+            "label": "Full width"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "label": "Dropdown width",
+        "id": "mega_menu_item2_width"
+      },
+      {
+        "type": "select",
+        "label": "Content layout",
+        "id": "mega_menu_item2_type",
+        "options": [
+          {
+            "value": "noImage",
+            "label": "No image"
+          },
+          {
+            "value": "imageLeft",
+            "label": "Image left"
+          },
+          {
+            "value": "imageRight",
+            "label": "Image right"
+          },
+          {
+            "value": "imageTop",
+            "label": "Image top"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "label": "Image area width",
+        "id": "mega_menu_item2_image_area_width"
+      },
+      {
+        "type": "text",
+        "label": "Category area width",
+        "id": "mega_menu_item2_category_area_width"
+      },
+      {
+        "type": "number",
+        "label": "Category columns",
+        "id": "mega_menu_item2_columns"
+      },
+      {
+        "type": "text",
+        "label": "Additional CSS class",
+        "id": "mega_menu_item2_custom_class"
+      },
+      {
+        "type": "heading",
+        "content": "Mega Menu Item 3"
+      },
+      {
+        "type": "select",
+        "label": "Dropdown alignment",
+        "id": "mega_menu_item3_align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "fullWidth",
+            "label": "Full width"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "label": "Dropdown width",
+        "id": "mega_menu_item3_width"
+      },
+      {
+        "type": "select",
+        "label": "Content layout",
+        "id": "mega_menu_item3_type",
+        "options": [
+          {
+            "value": "noImage",
+            "label": "No image"
+          },
+          {
+            "value": "imageLeft",
+            "label": "Image left"
+          },
+          {
+            "value": "imageRight",
+            "label": "Image right"
+          },
+          {
+            "value": "imageTop",
+            "label": "Image top"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "label": "Image area width",
+        "id": "mega_menu_item3_image_area_width"
+      },
+      {
+        "type": "text",
+        "label": "Category area width",
+        "id": "mega_menu_item3_category_area_width"
+      },
+      {
+        "type": "number",
+        "label": "Category columns",
+        "id": "mega_menu_item3_columns"
+      },
+      {
+        "type": "text",
+        "label": "Additional CSS class",
+        "id": "mega_menu_item3_custom_class"
+      },
+      {
+        "type": "text",
+        "label": "Top image 1 URL",
+        "id": "mega_menu_item3_image1_url"
+      },
+      {
+        "type": "text",
+        "label": "Top image 1 link",
+        "id": "mega_menu_item3_image1_link"
+      },
+      {
+        "type": "text",
+        "label": "Top image 1 alt text",
+        "id": "mega_menu_item3_image1_alt"
+      },
+      {
+        "type": "text",
+        "label": "Top image 2 URL",
+        "id": "mega_menu_item3_image2_url"
+      },
+      {
+        "type": "text",
+        "label": "Top image 2 link",
+        "id": "mega_menu_item3_image2_link"
+      },
+      {
+        "type": "text",
+        "label": "Top image 2 alt text",
+        "id": "mega_menu_item3_image2_alt"
+      },
+      {
+        "type": "text",
+        "label": "Top image 3 URL",
+        "id": "mega_menu_item3_image3_url"
+      },
+      {
+        "type": "text",
+        "label": "Top image 3 link",
+        "id": "mega_menu_item3_image3_link"
+      },
+      {
+        "type": "text",
+        "label": "Top image 3 alt text",
+        "id": "mega_menu_item3_image3_alt"
+      },
+      {
+        "type": "text",
+        "label": "Top image 4 URL",
+        "id": "mega_menu_item3_image4_url"
+      },
+      {
+        "type": "text",
+        "label": "Top image 4 link",
+        "id": "mega_menu_item3_image4_link"
+      },
+      {
+        "type": "text",
+        "label": "Top image 4 alt text",
+        "id": "mega_menu_item3_image4_alt"
+      },
+      {
+        "type": "text",
+        "label": "Bottom block title",
+        "id": "mega_menu_item3_bottom_title"
+      },
+      {
+        "type": "text",
+        "label": "Bottom block link text",
+        "id": "mega_menu_item3_bottom_link_text"
+      },
+      {
+        "type": "text",
+        "label": "Bottom block link URL",
+        "id": "mega_menu_item3_bottom_link_url"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 1 image",
+        "id": "mega_menu_item3_bottom_brand1_image"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 1 link",
+        "id": "mega_menu_item3_bottom_brand1_link"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 1 alt text",
+        "id": "mega_menu_item3_bottom_brand1_alt"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 2 image",
+        "id": "mega_menu_item3_bottom_brand2_image"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 2 link",
+        "id": "mega_menu_item3_bottom_brand2_link"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 2 alt text",
+        "id": "mega_menu_item3_bottom_brand2_alt"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 3 image",
+        "id": "mega_menu_item3_bottom_brand3_image"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 3 link",
+        "id": "mega_menu_item3_bottom_brand3_link"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 3 alt text",
+        "id": "mega_menu_item3_bottom_brand3_alt"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 4 image",
+        "id": "mega_menu_item3_bottom_brand4_image"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 4 link",
+        "id": "mega_menu_item3_bottom_brand4_link"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 4 alt text",
+        "id": "mega_menu_item3_bottom_brand4_alt"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 5 image",
+        "id": "mega_menu_item3_bottom_brand5_image"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 5 link",
+        "id": "mega_menu_item3_bottom_brand5_link"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 5 alt text",
+        "id": "mega_menu_item3_bottom_brand5_alt"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 6 image",
+        "id": "mega_menu_item3_bottom_brand6_image"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 6 link",
+        "id": "mega_menu_item3_bottom_brand6_link"
+      },
+      {
+        "type": "text",
+        "label": "Bottom brand 6 alt text",
+        "id": "mega_menu_item3_bottom_brand6_alt"
       }
     ]
   },
@@ -797,9 +1197,373 @@
           },
           {
             "value": "wide",
-            "label": "Mode"
+            "label": "Wide"
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "Home Content",
+    "settings": [
+      {
+        "type": "heading",
+        "content": "Best Selling Promotion Strip"
+      },
+      {
+        "type": "text",
+        "label": "Promotion label",
+        "id": "home_best_selling_label"
+      },
+      {
+        "type": "textarea",
+        "label": "Promotion links HTML",
+        "id": "home_best_selling_links_html"
+      },
+      {
+        "type": "heading",
+        "content": "Store Advantage Items"
+      },
+      {
+        "type": "text",
+        "label": "Section label",
+        "id": "home_store_advantage_label"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 icon class",
+        "id": "home_store_advantage_item1_icon"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 title",
+        "id": "home_store_advantage_item1_title"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 description",
+        "id": "home_store_advantage_item1_text"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 icon class",
+        "id": "home_store_advantage_item2_icon"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 title",
+        "id": "home_store_advantage_item2_title"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 description",
+        "id": "home_store_advantage_item2_text"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 icon class",
+        "id": "home_store_advantage_item3_icon"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 title",
+        "id": "home_store_advantage_item3_title"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 description",
+        "id": "home_store_advantage_item3_text"
+      },
+      {
+        "type": "text",
+        "label": "Item 4 icon class",
+        "id": "home_store_advantage_item4_icon"
+      },
+      {
+        "type": "text",
+        "label": "Item 4 title",
+        "id": "home_store_advantage_item4_title"
+      },
+      {
+        "type": "text",
+        "label": "Item 4 description",
+        "id": "home_store_advantage_item4_text"
+      },
+      {
+        "type": "heading",
+        "content": "Home Right Banner"
+      },
+      {
+        "type": "textarea",
+        "label": "Custom banner HTML",
+        "id": "home_right_banner_html"
+      },
+      {
+        "type": "text",
+        "label": "Banner image URL",
+        "id": "home_right_banner_image_url"
+      },
+      {
+        "type": "text",
+        "label": "Banner link URL",
+        "id": "home_right_banner_link"
+      },
+      {
+        "type": "text",
+        "label": "Banner image alt text",
+        "id": "home_right_banner_alt"
+      },
+      {
+        "type": "heading",
+        "content": "Shop by Top Categories"
+      },
+      {
+        "type": "text",
+        "label": "Heading text",
+        "id": "home_top_categories_heading"
+      },
+      {
+        "type": "text",
+        "label": "Heading highlight text",
+        "id": "home_top_categories_highlight"
+      },
+      {
+        "type": "text",
+        "label": "Category 1 title",
+        "id": "home_top_category1_title"
+      },
+      {
+        "type": "text",
+        "label": "Category 1 link URL",
+        "id": "home_top_category1_url"
+      },
+      {
+        "type": "text",
+        "label": "Category 1 image URL",
+        "id": "home_top_category1_image"
+      },
+      {
+        "type": "text",
+        "label": "Category 1 description",
+        "id": "home_top_category1_text"
+      },
+      {
+        "type": "text",
+        "label": "Category 2 title",
+        "id": "home_top_category2_title"
+      },
+      {
+        "type": "text",
+        "label": "Category 2 link URL",
+        "id": "home_top_category2_url"
+      },
+      {
+        "type": "text",
+        "label": "Category 2 image URL",
+        "id": "home_top_category2_image"
+      },
+      {
+        "type": "text",
+        "label": "Category 2 description",
+        "id": "home_top_category2_text"
+      },
+      {
+        "type": "text",
+        "label": "Category 3 title",
+        "id": "home_top_category3_title"
+      },
+      {
+        "type": "text",
+        "label": "Category 3 link URL",
+        "id": "home_top_category3_url"
+      },
+      {
+        "type": "text",
+        "label": "Category 3 image URL",
+        "id": "home_top_category3_image"
+      },
+      {
+        "type": "text",
+        "label": "Category 3 description",
+        "id": "home_top_category3_text"
+      },
+      {
+        "type": "text",
+        "label": "Category 4 title",
+        "id": "home_top_category4_title"
+      },
+      {
+        "type": "text",
+        "label": "Category 4 link URL",
+        "id": "home_top_category4_url"
+      },
+      {
+        "type": "text",
+        "label": "Category 4 image URL",
+        "id": "home_top_category4_image"
+      },
+      {
+        "type": "text",
+        "label": "Category 4 description",
+        "id": "home_top_category4_text"
+      },
+      {
+        "type": "text",
+        "label": "Category 5 title",
+        "id": "home_top_category5_title"
+      },
+      {
+        "type": "text",
+        "label": "Category 5 link URL",
+        "id": "home_top_category5_url"
+      },
+      {
+        "type": "text",
+        "label": "Category 5 image URL",
+        "id": "home_top_category5_image"
+      },
+      {
+        "type": "text",
+        "label": "Category 5 description",
+        "id": "home_top_category5_text"
+      },
+      {
+        "type": "text",
+        "label": "Category 6 title",
+        "id": "home_top_category6_title"
+      },
+      {
+        "type": "text",
+        "label": "Category 6 link URL",
+        "id": "home_top_category6_url"
+      },
+      {
+        "type": "text",
+        "label": "Category 6 image URL",
+        "id": "home_top_category6_image"
+      },
+      {
+        "type": "text",
+        "label": "Category 6 description",
+        "id": "home_top_category6_text"
+      },
+      {
+        "type": "heading",
+        "content": "Home Middle Banner"
+      },
+      {
+        "type": "textarea",
+        "label": "Custom banner HTML",
+        "id": "home_middle_banner_html"
+      },
+      {
+        "type": "text",
+        "label": "Banner image URL",
+        "id": "home_middle_banner_image"
+      },
+      {
+        "type": "text",
+        "label": "Banner link URL",
+        "id": "home_middle_banner_link"
+      },
+      {
+        "type": "text",
+        "label": "Banner image alt text",
+        "id": "home_middle_banner_alt"
+      },
+      {
+        "type": "heading",
+        "content": "Brand Slider"
+      },
+      {
+        "type": "text",
+        "label": "Brand 1 image URL",
+        "id": "home_brand_slider_item1_image"
+      },
+      {
+        "type": "text",
+        "label": "Brand 1 link URL",
+        "id": "home_brand_slider_item1_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand 1 alt text",
+        "id": "home_brand_slider_item1_alt"
+      },
+      {
+        "type": "text",
+        "label": "Brand 2 image URL",
+        "id": "home_brand_slider_item2_image"
+      },
+      {
+        "type": "text",
+        "label": "Brand 2 link URL",
+        "id": "home_brand_slider_item2_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand 2 alt text",
+        "id": "home_brand_slider_item2_alt"
+      },
+      {
+        "type": "text",
+        "label": "Brand 3 image URL",
+        "id": "home_brand_slider_item3_image"
+      },
+      {
+        "type": "text",
+        "label": "Brand 3 link URL",
+        "id": "home_brand_slider_item3_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand 3 alt text",
+        "id": "home_brand_slider_item3_alt"
+      },
+      {
+        "type": "text",
+        "label": "Brand 4 image URL",
+        "id": "home_brand_slider_item4_image"
+      },
+      {
+        "type": "text",
+        "label": "Brand 4 link URL",
+        "id": "home_brand_slider_item4_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand 4 alt text",
+        "id": "home_brand_slider_item4_alt"
+      },
+      {
+        "type": "text",
+        "label": "Brand 5 image URL",
+        "id": "home_brand_slider_item5_image"
+      },
+      {
+        "type": "text",
+        "label": "Brand 5 link URL",
+        "id": "home_brand_slider_item5_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand 5 alt text",
+        "id": "home_brand_slider_item5_alt"
+      },
+      {
+        "type": "text",
+        "label": "Brand 6 image URL",
+        "id": "home_brand_slider_item6_image"
+      },
+      {
+        "type": "text",
+        "label": "Brand 6 link URL",
+        "id": "home_brand_slider_item6_link"
+      },
+      {
+        "type": "text",
+        "label": "Brand 6 alt text",
+        "id": "home_brand_slider_item6_alt"
       }
     ]
   },
@@ -1595,6 +2359,326 @@
         "type": "color",
         "label": "Text Info color",
         "id": "footer-info-text-color"
+      },
+      {
+        "type": "heading",
+        "content": "Footer Contact Bar"
+      },
+      {
+        "type": "textarea",
+        "label": "Contact message HTML",
+        "id": "footer_info_message_html"
+      },
+      {
+        "type": "heading",
+        "content": "Footer Service Items"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 icon ID",
+        "id": "footer_service_item1_icon"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 title",
+        "id": "footer_service_item1_title"
+      },
+      {
+        "type": "text",
+        "label": "Item 1 description",
+        "id": "footer_service_item1_text"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 icon ID",
+        "id": "footer_service_item2_icon"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 title",
+        "id": "footer_service_item2_title"
+      },
+      {
+        "type": "text",
+        "label": "Item 2 description",
+        "id": "footer_service_item2_text"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 icon ID",
+        "id": "footer_service_item3_icon"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 title",
+        "id": "footer_service_item3_title"
+      },
+      {
+        "type": "text",
+        "label": "Item 3 description",
+        "id": "footer_service_item3_text"
+      },
+      {
+        "type": "text",
+        "label": "Item 4 icon ID",
+        "id": "footer_service_item4_icon"
+      },
+      {
+        "type": "text",
+        "label": "Item 4 title",
+        "id": "footer_service_item4_title"
+      },
+      {
+        "type": "text",
+        "label": "Item 4 description",
+        "id": "footer_service_item4_text"
+      },
+      {
+        "type": "heading",
+        "content": "Footer Column 1"
+      },
+      {
+        "type": "text",
+        "label": "Column heading",
+        "id": "footer_column1_heading"
+      },
+      {
+        "type": "text",
+        "label": "Link 1 text",
+        "id": "footer_column1_link1_text"
+      },
+      {
+        "type": "text",
+        "label": "Link 1 URL",
+        "id": "footer_column1_link1_url"
+      },
+      {
+        "type": "text",
+        "label": "Link 2 text",
+        "id": "footer_column1_link2_text"
+      },
+      {
+        "type": "text",
+        "label": "Link 2 URL",
+        "id": "footer_column1_link2_url"
+      },
+      {
+        "type": "text",
+        "label": "Link 3 text",
+        "id": "footer_column1_link3_text"
+      },
+      {
+        "type": "text",
+        "label": "Link 3 URL",
+        "id": "footer_column1_link3_url"
+      },
+      {
+        "type": "text",
+        "label": "Link 4 text",
+        "id": "footer_column1_link4_text"
+      },
+      {
+        "type": "text",
+        "label": "Link 4 URL",
+        "id": "footer_column1_link4_url"
+      },
+      {
+        "type": "text",
+        "label": "Link 5 text",
+        "id": "footer_column1_link5_text"
+      },
+      {
+        "type": "text",
+        "label": "Link 5 URL",
+        "id": "footer_column1_link5_url"
+      },
+      {
+        "type": "text",
+        "label": "Link 6 text",
+        "id": "footer_column1_link6_text"
+      },
+      {
+        "type": "text",
+        "label": "Link 6 URL",
+        "id": "footer_column1_link6_url"
+      },
+      {
+        "type": "text",
+        "label": "Link 7 text",
+        "id": "footer_column1_link7_text"
+      },
+      {
+        "type": "text",
+        "label": "Link 7 URL",
+        "id": "footer_column1_link7_url"
+      },
+      {
+        "type": "text",
+        "label": "Link 8 text",
+        "id": "footer_column1_link8_text"
+      },
+      {
+        "type": "text",
+        "label": "Link 8 URL",
+        "id": "footer_column1_link8_url"
+      },
+      {
+        "type": "heading",
+        "content": "Footer Column 2"
+      },
+      {
+        "type": "text",
+        "label": "Column heading",
+        "id": "footer_column2_heading"
+      },
+      {
+        "type": "text",
+        "label": "Link 1 text",
+        "id": "footer_column2_link1_text"
+      },
+      {
+        "type": "text",
+        "label": "Link 1 URL",
+        "id": "footer_column2_link1_url"
+      },
+      {
+        "type": "text",
+        "label": "Link 2 text",
+        "id": "footer_column2_link2_text"
+      },
+      {
+        "type": "text",
+        "label": "Link 2 URL",
+        "id": "footer_column2_link2_url"
+      },
+      {
+        "type": "text",
+        "label": "Link 3 text",
+        "id": "footer_column2_link3_text"
+      },
+      {
+        "type": "text",
+        "label": "Link 3 URL",
+        "id": "footer_column2_link3_url"
+      },
+      {
+        "type": "text",
+        "label": "Link 4 text",
+        "id": "footer_column2_link4_text"
+      },
+      {
+        "type": "text",
+        "label": "Link 4 URL",
+        "id": "footer_column2_link4_url"
+      },
+      {
+        "type": "text",
+        "label": "Link 5 text",
+        "id": "footer_column2_link5_text"
+      },
+      {
+        "type": "text",
+        "label": "Link 5 URL",
+        "id": "footer_column2_link5_url"
+      },
+      {
+        "type": "text",
+        "label": "Link 6 text",
+        "id": "footer_column2_link6_text"
+      },
+      {
+        "type": "text",
+        "label": "Link 6 URL",
+        "id": "footer_column2_link6_url"
+      },
+      {
+        "type": "text",
+        "label": "Link 7 text",
+        "id": "footer_column2_link7_text"
+      },
+      {
+        "type": "text",
+        "label": "Link 7 URL",
+        "id": "footer_column2_link7_url"
+      },
+      {
+        "type": "heading",
+        "content": "Footer Payment Logos"
+      },
+      {
+        "type": "text",
+        "label": "Logo 1 image URL",
+        "id": "footer_payment_logo1_image"
+      },
+      {
+        "type": "text",
+        "label": "Logo 1 link URL",
+        "id": "footer_payment_logo1_link"
+      },
+      {
+        "type": "text",
+        "label": "Logo 1 alt text",
+        "id": "footer_payment_logo1_alt"
+      },
+      {
+        "type": "text",
+        "label": "Logo 2 image URL",
+        "id": "footer_payment_logo2_image"
+      },
+      {
+        "type": "text",
+        "label": "Logo 2 link URL",
+        "id": "footer_payment_logo2_link"
+      },
+      {
+        "type": "text",
+        "label": "Logo 2 alt text",
+        "id": "footer_payment_logo2_alt"
+      },
+      {
+        "type": "text",
+        "label": "Logo 3 image URL",
+        "id": "footer_payment_logo3_image"
+      },
+      {
+        "type": "text",
+        "label": "Logo 3 link URL",
+        "id": "footer_payment_logo3_link"
+      },
+      {
+        "type": "text",
+        "label": "Logo 3 alt text",
+        "id": "footer_payment_logo3_alt"
+      },
+      {
+        "type": "text",
+        "label": "Logo 4 image URL",
+        "id": "footer_payment_logo4_image"
+      },
+      {
+        "type": "text",
+        "label": "Logo 4 link URL",
+        "id": "footer_payment_logo4_link"
+      },
+      {
+        "type": "text",
+        "label": "Logo 4 alt text",
+        "id": "footer_payment_logo4_alt"
+      },
+      {
+        "type": "text",
+        "label": "Logo 5 image URL",
+        "id": "footer_payment_logo5_image"
+      },
+      {
+        "type": "text",
+        "label": "Logo 5 link URL",
+        "id": "footer_payment_logo5_link"
+      },
+      {
+        "type": "text",
+        "label": "Logo 5 alt text",
+        "id": "footer_payment_logo5_alt"
       },
       {
         "type": "heading",

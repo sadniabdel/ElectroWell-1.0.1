@@ -1,5 +1,9 @@
 <div class="static-block wow fadeInUp animated" data-wow-delay="100ms">
-    <a href="#" class="imgAnimation">
-        <img src="/product_images/uploaded_images/banner-first-block.jpg" alt="" />
+    {{#if theme_settings.home_middle_banner_html}}
+    {{{theme_settings.home_middle_banner_html}}}
+    {{else if theme_settings.home_middle_banner_image}}
+    <a href="{{theme_settings.home_middle_banner_link}}" class="imgAnimation">
+        <img src="{{theme_settings.home_middle_banner_image}}" alt="{{theme_settings.home_middle_banner_alt}}" />
     </a>
+    {{/if}}
 </div>

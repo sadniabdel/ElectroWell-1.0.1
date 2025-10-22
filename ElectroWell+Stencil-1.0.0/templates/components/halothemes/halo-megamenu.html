@@ -1,34 +1,146 @@
 <!-- @HaloMegaMenu Library -->
+<div id="haloMegaMenuConfig" class="haloMegaMenuConfig" style="display:none;"
+    data-item2-align="{{theme_settings.mega_menu_item2_align}}"
+    data-item2-width="{{theme_settings.mega_menu_item2_width}}"
+    data-item2-type="{{theme_settings.mega_menu_item2_type}}"
+    data-item2-image-width="{{theme_settings.mega_menu_item2_image_area_width}}"
+    data-item2-category-width="{{theme_settings.mega_menu_item2_category_area_width}}"
+    data-item2-columns="{{theme_settings.mega_menu_item2_columns}}"
+    data-item2-custom-class="{{theme_settings.mega_menu_item2_custom_class}}"
+    data-item3-align="{{theme_settings.mega_menu_item3_align}}"
+    data-item3-width="{{theme_settings.mega_menu_item3_width}}"
+    data-item3-type="{{theme_settings.mega_menu_item3_type}}"
+    data-item3-image-width="{{theme_settings.mega_menu_item3_image_area_width}}"
+    data-item3-category-width="{{theme_settings.mega_menu_item3_category_area_width}}"
+    data-item3-columns="{{theme_settings.mega_menu_item3_columns}}"
+    data-item3-custom-class="{{theme_settings.mega_menu_item3_custom_class}}"
+    data-item3-image1-url="{{theme_settings.mega_menu_item3_image1_url}}"
+    data-item3-image1-link="{{theme_settings.mega_menu_item3_image1_link}}"
+    data-item3-image1-alt="{{theme_settings.mega_menu_item3_image1_alt}}"
+    data-item3-image2-url="{{theme_settings.mega_menu_item3_image2_url}}"
+    data-item3-image2-link="{{theme_settings.mega_menu_item3_image2_link}}"
+    data-item3-image2-alt="{{theme_settings.mega_menu_item3_image2_alt}}"
+    data-item3-image3-url="{{theme_settings.mega_menu_item3_image3_url}}"
+    data-item3-image3-link="{{theme_settings.mega_menu_item3_image3_link}}"
+    data-item3-image3-alt="{{theme_settings.mega_menu_item3_image3_alt}}"
+    data-item3-image4-url="{{theme_settings.mega_menu_item3_image4_url}}"
+    data-item3-image4-link="{{theme_settings.mega_menu_item3_image4_link}}"
+    data-item3-image4-alt="{{theme_settings.mega_menu_item3_image4_alt}}"
+    data-item3-bottom-title="{{theme_settings.mega_menu_item3_bottom_title}}"
+    data-item3-bottom-link-text="{{theme_settings.mega_menu_item3_bottom_link_text}}"
+    data-item3-bottom-link-url="{{theme_settings.mega_menu_item3_bottom_link_url}}"
+    data-item3-bottom-brand1-image="{{theme_settings.mega_menu_item3_bottom_brand1_image}}"
+    data-item3-bottom-brand1-link="{{theme_settings.mega_menu_item3_bottom_brand1_link}}"
+    data-item3-bottom-brand1-alt="{{theme_settings.mega_menu_item3_bottom_brand1_alt}}"
+    data-item3-bottom-brand2-image="{{theme_settings.mega_menu_item3_bottom_brand2_image}}"
+    data-item3-bottom-brand2-link="{{theme_settings.mega_menu_item3_bottom_brand2_link}}"
+    data-item3-bottom-brand2-alt="{{theme_settings.mega_menu_item3_bottom_brand2_alt}}"
+    data-item3-bottom-brand3-image="{{theme_settings.mega_menu_item3_bottom_brand3_image}}"
+    data-item3-bottom-brand3-link="{{theme_settings.mega_menu_item3_bottom_brand3_link}}"
+    data-item3-bottom-brand3-alt="{{theme_settings.mega_menu_item3_bottom_brand3_alt}}"
+    data-item3-bottom-brand4-image="{{theme_settings.mega_menu_item3_bottom_brand4_image}}"
+    data-item3-bottom-brand4-link="{{theme_settings.mega_menu_item3_bottom_brand4_link}}"
+    data-item3-bottom-brand4-alt="{{theme_settings.mega_menu_item3_bottom_brand4_alt}}"
+    data-item3-bottom-brand5-image="{{theme_settings.mega_menu_item3_bottom_brand5_image}}"
+    data-item3-bottom-brand5-link="{{theme_settings.mega_menu_item3_bottom_brand5_link}}"
+    data-item3-bottom-brand5-alt="{{theme_settings.mega_menu_item3_bottom_brand5_alt}}"
+    data-item3-bottom-brand6-image="{{theme_settings.mega_menu_item3_bottom_brand6_image}}"
+    data-item3-bottom-brand6-link="{{theme_settings.mega_menu_item3_bottom_brand6_link}}"
+    data-item3-bottom-brand6-alt="{{theme_settings.mega_menu_item3_bottom_brand6_alt}}"
+></div>
 <script src="{{cdn '/assets/js/theme/halothemes/haloMegaMenu.js'}}" defer></script>
 <script>
 jQuery(document).ready(function($) {
-    /* Megamenu Settings */
-    // information at bottom categories with variable : bottomCates
-    //bottomCates: '<div class="own-text"><p>free shipping in the u.s. & internationally</p></div>'
+    var $config = $('#haloMegaMenuConfig');
+    var config = $config.data() || {};
 
+    function getNumber(value, fallback) {
+        var parsed = parseInt(value, 10);
+        return isNaN(parsed) ? fallback : parsed;
+    }
+
+    function escapeHtml(value) {
+        return (value || '').toString()
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
+    function buildImageLink(url, link, alt) {
+        if (!url) {
+            return '';
+        }
+        var href = escapeHtml(link || '#');
+        var src = escapeHtml(url);
+        var altText = escapeHtml(alt || '');
+        return '<a href="' + href + '"><img src="' + src + '" alt="' + altText + '"/></a>';
+    }
+
+    function buildBrandItem(url, link, alt) {
+        if (!url) {
+            return '';
+        }
+        var href = escapeHtml(link || '#');
+        var src = escapeHtml(url);
+        var altText = escapeHtml(alt || '');
+        return '<li><a href="' + href + '"><img src="' + src + '" alt="' + altText + '"></a></li>';
+    }
+
+    var item2Columns = getNumber(config.item2Columns, 3);
     menuItem(2).HaloMegaMenu({
-        dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
-        dropWidth: '700px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
-        dropType: 'noImage',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
-        imageAreaWidth: '',    // width of images area
-        cateAreaWidth: '100%',     // width of categories area
-        cateColumns: 3,           // columns of categories area - max 5 columns
-        addclass_special: 'position_image_right'
+        dropAlign: config.item2Align || 'left',
+        dropWidth: config.item2Width || '700px',
+        dropType: config.item2Type || 'noImage',
+        imageAreaWidth: config.item2ImageWidth || '',
+        cateAreaWidth: config.item2CategoryWidth || '100%',
+        cateColumns: item2Columns,
+        addclass_special: config.item2CustomClass || ''
     });
+
+    var imagesTop = [];
+    for (var i = 1; i <= 4; i++) {
+        var imageHtml = buildImageLink(config['item3Image' + i + 'Url'], config['item3Image' + i + 'Link'], config['item3Image' + i + 'Alt']);
+        if (imageHtml) {
+            imagesTop.push(imageHtml);
+        }
+    }
+
+    var brandItems = [];
+    for (var j = 1; j <= 6; j++) {
+        var brandHtml = buildBrandItem(config['item3BottomBrand' + j + 'Image'], config['item3BottomBrand' + j + 'Link'], config['item3BottomBrand' + j + 'Alt']);
+        if (brandHtml) {
+            brandItems.push(brandHtml);
+        }
+    }
+
+    var bottomHtml = '';
+    if (brandItems.length) {
+        bottomHtml = '<div class="image_brand">';
+        bottomHtml += '<div class="title">';
+        if (config.item3BottomTitle) {
+            bottomHtml += '<label>' + escapeHtml(config.item3BottomTitle) + '</label>';
+        }
+        if (config.item3BottomLinkText) {
+            bottomHtml += '<a href="' + escapeHtml(config.item3BottomLinkUrl || '#') + '">' + escapeHtml(config.item3BottomLinkText) + '</a>';
+        }
+        bottomHtml += '</div>';
+        bottomHtml += '<div class="Brand-Image"><ul>' + brandItems.join('') + '</ul></div>';
+        bottomHtml += '</div>';
+    }
+
+    var item3Columns = getNumber(config.item3Columns, 4);
     menuItem(3).HaloMegaMenu({
-        dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
-        dropWidth: '900px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
-        dropType: 'imageTop',     // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
-        imageAreaWidth: '',     // width of images area
-        cateAreaWidth: '100%',    // width of categories area
-        cateColumns: 4,           // columns of categories area - max 5 columns
-        // contents for images column (HTML supported)
-        imagesTop: ['<a href="#placeholder_link"><img src="/product_images/uploaded_images/image-menu-1.png"/></a>',
-            '<a href="#placeholder_link"><img src="/product_images/uploaded_images/image-menu-2.png"/></a>',
-            '<a href="#placeholder_link"><img src="/product_images/uploaded_images/image-menu-3.png"/></a>',
-            '<a href="#placeholder_link"><img src="/product_images/uploaded_images/image-menu-4.png"/></a>'
-        ],
-        bottomCates: '<div class="image_brand"><div class="title"><label>Popular Brands</label><a href="/brands/">View All Brands</a></div><div class="Brand-Image"><ul><li class=""><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-1.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-2.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-3.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-4.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-5.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-6.png"></a></li></ul></div></div>'
+        dropAlign: config.item3Align || 'left',
+        dropWidth: config.item3Width || '900px',
+        dropType: config.item3Type || 'imageTop',
+        imageAreaWidth: config.item3ImageWidth || '',
+        cateAreaWidth: config.item3CategoryWidth || '100%',
+        cateColumns: item3Columns,
+        imagesTop: imagesTop,
+        bottomCates: bottomHtml,
+        addclass_special: config.item3CustomClass || ''
     });
 });
 </script>

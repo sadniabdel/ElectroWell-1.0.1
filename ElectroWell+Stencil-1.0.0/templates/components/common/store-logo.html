@@ -1,7 +1,19 @@
 <a href="{{urls.home}}">
-    {{#if settings.store_logo.image}}
-        <img class="header-logo-image" src="{{getImage settings.store_logo.image}}" alt="{{settings.store_logo.title}}" title="{{settings.store_logo.title}}">
+    {{#if theme_settings.logo_use_custom_url}}
+        {{#if theme_settings.logo_custom_url}}
+            <img class="header-logo-image" src="{{theme_settings.logo_custom_url}}" alt="{{#if theme_settings.logo_custom_alt}}{{theme_settings.logo_custom_alt}}{{else}}{{settings.store_logo.title}}{{/if}}" title="{{#if theme_settings.logo_custom_alt}}{{theme_settings.logo_custom_alt}}{{else}}{{settings.store_logo.title}}{{/if}}">
+        {{else}}
+            {{#if settings.store_logo.image}}
+                <img class="header-logo-image" src="{{getImage settings.store_logo.image}}" alt="{{settings.store_logo.title}}" title="{{settings.store_logo.title}}">
+            {{else}}
+                <span class="header-logo-text">{{settings.store_logo.title}}</span>
+            {{/if}}
+        {{/if}}
     {{else}}
-        <span class="header-logo-text">{{settings.store_logo.title}}</span>
+        {{#if settings.store_logo.image}}
+            <img class="header-logo-image" src="{{getImage settings.store_logo.image}}" alt="{{settings.store_logo.title}}" title="{{settings.store_logo.title}}">
+        {{else}}
+            <span class="header-logo-text">{{settings.store_logo.title}}</span>
+        {{/if}}
     {{/if}}
 </a>
