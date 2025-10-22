@@ -1,15 +1,19 @@
-{{!-- Product JSON-LD Schema for Rich Snippets --}}
+{{!-- Enhanced Product JSON-LD Schema for Google Shopping & Rich Snippets --}}
 {{#if product}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org/",
   "@type": "Product",
   "name": {{json product.title}},
+  {{#if product.images}}
   "image": [
     {{#each product.images}}
     "{{getImage this 'zoom_size'}}"{{#unless @last}},{{/unless}}
     {{/each}}
   ],
+  {{else}}
+  "image": "{{cdn 'img/ProductDefault.gif'}}",
+  {{/if}}
   "description": {{json product.description}},
   {{#if product.sku}}
   "sku": {{json product.sku}},
@@ -27,6 +31,11 @@
   "brand": {
     "@type": "Brand",
     "name": {{json product.brand.name}}
+  },
+  {{else}}
+  "brand": {
+    "@type": "Brand",
+    "name": "{{settings.store_name}}"
   },
   {{/if}}
   {{#if product.num_reviews}}
@@ -68,8 +77,8 @@
     "url": "{{product.url}}",
     "priceCurrency": "{{currency_selector.active_currency_code}}",
     "price": "{{#if product.price.with_tax}}{{product.price.with_tax.value}}{{else}}{{product.price.without_tax.value}}{{/if}}",
-    "priceValidUntil": "{{date '2025-12-31' format='%Y-%m-%d'}}",
-    "itemCondition": "https://schema.org/{{#if product.condition}}{{product.condition}}{{else}}NewCondition{{/if}}",
+    "priceValidUntil": "2026-12-31",
+    "itemCondition": "https://schema.org/NewCondition",
     "availability": "https://schema.org/{{#if product.out_of_stock}}OutOfStock{{else}}InStock{{/if}}",
     {{#if product.shipping}}
     {{#if product.shipping.price.value '===' 0}}
@@ -104,9 +113,11 @@
     "@type": "Offer",
     "url": "{{product.url}}",
     "availability": "https://schema.org/{{#if product.out_of_stock}}OutOfStock{{else}}InStock{{/if}}",
+    "priceCurrency": "{{currency_selector.active_currency_code}}",
+    "price": "0.00",
     "priceSpecification": {
       "@type": "PriceSpecification",
-      "price": "0",
+      "price": "0.00",
       "priceCurrency": "{{currency_selector.active_currency_code}}"
     },
     "seller": {
@@ -115,6 +126,18 @@
     }
   }
   {{/unless}}
+  {{else}}
+  "offers": {
+    "@type": "Offer",
+    "url": "{{product.url}}",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "USD",
+    "price": "0.00",
+    "seller": {
+      "@type": "Organization",
+      "name": "{{settings.store_name}}"
+    }
+  }
   {{/if}}
 }
 </script>
