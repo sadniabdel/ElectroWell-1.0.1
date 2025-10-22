@@ -1,6 +1,6 @@
 <div class="contCategory">
     <div class="hl-featured-category">
-        <h2 class="module-heading">Shop by <span>Top Categories</span></h2>
+        <h2 class="module-heading">{{theme_settings.home_top_categories_heading}} <span>{{theme_settings.home_top_categories_highlight}}</span></h2>
         <div class="featured_category_content">
             <div class="row-item owl-carousel"
                 data-owl='{
@@ -35,33 +35,48 @@
                   },
                   "responsiveRefreshRate": 0
                 }'>
-                <div class="item-category item"> 
-                    <a href="#" class="item-image"><img src="/product_images/uploaded_images/top-categories-1.jpg" /></a>
-                    <h3><a href="#" title="Home Appliances">Home Appliances</a></h3>
-                    <p>Sale up to 30% off on selected items</p>                      
+                {{#if theme_settings.home_top_category1_title}}
+                <div class="item-category item">
+                    {{#if theme_settings.home_top_category1_image}}<a href="{{theme_settings.home_top_category1_url}}" class="item-image"><img src="{{theme_settings.home_top_category1_image}}" alt="{{theme_settings.home_top_category1_title}}" /></a>{{/if}}
+                    <h3><a href="{{theme_settings.home_top_category1_url}}" title="{{theme_settings.home_top_category1_title}}">{{theme_settings.home_top_category1_title}}</a></h3>
+                    {{#if theme_settings.home_top_category1_text}}<p>{{theme_settings.home_top_category1_text}}</p>{{/if}}
                 </div>
-                <div class="item-category item"> 
-                    <a href="#" class="item-image"><img src="/product_images/uploaded_images/top-categories-2.jpg" /></a>
-                    <h3><a href="#" title="Computers & Laptops">Computers & Laptops</a></h3>                      
+                {{/if}}
+                {{#if theme_settings.home_top_category2_title}}
+                <div class="item-category item">
+                    {{#if theme_settings.home_top_category2_image}}<a href="{{theme_settings.home_top_category2_url}}" class="item-image"><img src="{{theme_settings.home_top_category2_image}}" alt="{{theme_settings.home_top_category2_title}}" /></a>{{/if}}
+                    <h3><a href="{{theme_settings.home_top_category2_url}}" title="{{theme_settings.home_top_category2_title}}">{{theme_settings.home_top_category2_title}}</a></h3>
+                    {{#if theme_settings.home_top_category2_text}}<p>{{theme_settings.home_top_category2_text}}</p>{{/if}}
                 </div>
-                <div class="item-category item"> 
-                    <a href="#" class="item-image"><img src="/product_images/uploaded_images/top-categories-3.jpg" /></a>
-                    <h3><a href="#" title="Mobile Phones & Tablets">Mobile Phones & Tablets</a></h3>
-                    <p>Sale up to 10% off on selected items</p>                      
+                {{/if}}
+                {{#if theme_settings.home_top_category3_title}}
+                <div class="item-category item">
+                    {{#if theme_settings.home_top_category3_image}}<a href="{{theme_settings.home_top_category3_url}}" class="item-image"><img src="{{theme_settings.home_top_category3_image}}" alt="{{theme_settings.home_top_category3_title}}" /></a>{{/if}}
+                    <h3><a href="{{theme_settings.home_top_category3_url}}" title="{{theme_settings.home_top_category3_title}}">{{theme_settings.home_top_category3_title}}</a></h3>
+                    {{#if theme_settings.home_top_category3_text}}<p>{{theme_settings.home_top_category3_text}}</p>{{/if}}
                 </div>
-                <div class="item-category item"> 
-                    <a href="#" class="item-image"><img src="/product_images/uploaded_images/top-categories-4.jpg" /></a>
-                    <h3><a href="#" title="Cameras">Cameras</a></h3>
-                    <p>Sale up to 25% off on selected items</p>                      
+                {{/if}}
+                {{#if theme_settings.home_top_category4_title}}
+                <div class="item-category item">
+                    {{#if theme_settings.home_top_category4_image}}<a href="{{theme_settings.home_top_category4_url}}" class="item-image"><img src="{{theme_settings.home_top_category4_image}}" alt="{{theme_settings.home_top_category4_title}}" /></a>{{/if}}
+                    <h3><a href="{{theme_settings.home_top_category4_url}}" title="{{theme_settings.home_top_category4_title}}">{{theme_settings.home_top_category4_title}}</a></h3>
+                    {{#if theme_settings.home_top_category4_text}}<p>{{theme_settings.home_top_category4_text}}</p>{{/if}}
                 </div>
-                <div class="item-category item"> 
-                    <a href="#" class="item-image"><img src="/product_images/uploaded_images/top-categories-5.jpg" /></a>
-                    <h3><a href="#" title="Televisions">Televisions</a></h3>                      
+                {{/if}}
+                {{#if theme_settings.home_top_category5_title}}
+                <div class="item-category item">
+                    {{#if theme_settings.home_top_category5_image}}<a href="{{theme_settings.home_top_category5_url}}" class="item-image"><img src="{{theme_settings.home_top_category5_image}}" alt="{{theme_settings.home_top_category5_title}}" /></a>{{/if}}
+                    <h3><a href="{{theme_settings.home_top_category5_url}}" title="{{theme_settings.home_top_category5_title}}">{{theme_settings.home_top_category5_title}}</a></h3>
+                    {{#if theme_settings.home_top_category5_text}}<p>{{theme_settings.home_top_category5_text}}</p>{{/if}}
                 </div>
-                <div class="item-category item"> 
-                    <a href="#" class="item-image"><img src="/product_images/uploaded_images/top-categories-1.jpg" /></a>
-                    <h3><a href="#" title="Video Games &amp; Systems">Video Games &amp; Systems</a></h3>                      
+                {{/if}}
+                {{#if theme_settings.home_top_category6_title}}
+                <div class="item-category item">
+                    {{#if theme_settings.home_top_category6_image}}<a href="{{theme_settings.home_top_category6_url}}" class="item-image"><img src="{{theme_settings.home_top_category6_image}}" alt="{{theme_settings.home_top_category6_title}}" /></a>{{/if}}
+                    <h3><a href="{{theme_settings.home_top_category6_url}}" title="{{theme_settings.home_top_category6_title}}">{{theme_settings.home_top_category6_title}}</a></h3>
+                    {{#if theme_settings.home_top_category6_text}}<p>{{theme_settings.home_top_category6_text}}</p>{{/if}}
                 </div>
+                {{/if}}
             </div>
         </div>
     </div>

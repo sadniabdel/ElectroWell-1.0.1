@@ -1,9 +1,13 @@
 <div id="homeRightSlideBanners">
 	<!-- Begin Banners -->
-	<div class="banner-item wow fadeInUp animated" data-wow-delay="100ms">		
-		<a title="Bundle" href="#placeholder_link" class="imgAnimation">
-			<img src="/product_images/uploaded_images/right-slide-banner.jpg" alt="Bundle" />
-		</a>
-	</div>
+        <div class="banner-item wow fadeInUp animated" data-wow-delay="100ms">
+                {{#if theme_settings.home_right_banner_html}}
+                        {{{theme_settings.home_right_banner_html}}}
+                {{else if theme_settings.home_right_banner_image_url}}
+                        <a title="{{theme_settings.home_right_banner_alt}}" href="{{theme_settings.home_right_banner_link}}" class="imgAnimation">
+                                <img src="{{theme_settings.home_right_banner_image_url}}" alt="{{theme_settings.home_right_banner_alt}}" />
+                        </a>
+                {{/if}}
+        </div>
 	<!-- End Banners -->     
 </div>

@@ -4,7 +4,9 @@
 <footer id="footer-wrapper">
     <div class="footerInfo">
         <div class="container">
-            <p>Need help? We're available at <span>1800-000-6890</span> - Email us at <a href="mailto:service@domain.com" title="service@domain.com">service@domain.com</a> or <a href="#" title="Live Help" class="link">Live Help</a></p>
+            {{#if theme_settings.footer_info_message_html}}
+                {{{theme_settings.footer_info_message_html}}}
+            {{/if}}
         </div>
     </div>
     <div class="middle-footer">
@@ -32,34 +34,42 @@
         </div> -->
         <div class="container">
             <div class="themevale_service">
+                {{#if theme_settings.footer_service_item1_title}}
                 <div class="service-item">
                     <div class="service-wrapper">
-                        <i class="icon"><svg><use xlink:href="#icon-truck"></use></svg></i>
-                        <h3 class="title">Worldwide Delivery</h3>
-                        <p class="text">Metus tellus ultricies et quam sit amet commodo odio diam a libero nulla facilisi suspendissous enim sodales lacinia neque commodo.</p>
+                        {{#if theme_settings.footer_service_item1_icon}}<i class="icon"><svg><use xlink:href="#{{theme_settings.footer_service_item1_icon}}"></use></svg></i>{{/if}}
+                        <h3 class="title">{{theme_settings.footer_service_item1_title}}</h3>
+                        {{#if theme_settings.footer_service_item1_text}}<p class="text">{{theme_settings.footer_service_item1_text}}</p>{{/if}}
                     </div>
                 </div>
+                {{/if}}
+                {{#if theme_settings.footer_service_item2_title}}
                 <div class="service-item">
                     <div class="service-wrapper">
-                        <i class="icon"><svg><use xlink:href="#icon-credit-card"></use></svg></i>
-                        <h3 class="title">Secure Shopping</h3>
-                        <p class="text">Metus tellus ultricies et quam sit amet commodo odio diam a libero nulla facilisi suspendissous enim sodales lacinia neque commodo.</p>
+                        {{#if theme_settings.footer_service_item2_icon}}<i class="icon"><svg><use xlink:href="#{{theme_settings.footer_service_item2_icon}}"></use></svg></i>{{/if}}
+                        <h3 class="title">{{theme_settings.footer_service_item2_title}}</h3>
+                        {{#if theme_settings.footer_service_item2_text}}<p class="text">{{theme_settings.footer_service_item2_text}}</p>{{/if}}
                     </div>
                 </div>
+                {{/if}}
+                {{#if theme_settings.footer_service_item3_title}}
                 <div class="service-item">
                     <div class="service-wrapper">
-                        <i class="icon"><svg><use xlink:href="#icon-shield"></use></svg></i>
-                        <h3 class="title">Shop with Confidence</h3>
-                        <p class="text">Metus tellus ultricies et quam sit amet commodo odio diam a libero nulla facilisi suspendissous enim sodales lacinia neque commodo.</p>
+                        {{#if theme_settings.footer_service_item3_icon}}<i class="icon"><svg><use xlink:href="#{{theme_settings.footer_service_item3_icon}}"></use></svg></i>{{/if}}
+                        <h3 class="title">{{theme_settings.footer_service_item3_title}}</h3>
+                        {{#if theme_settings.footer_service_item3_text}}<p class="text">{{theme_settings.footer_service_item3_text}}</p>{{/if}}
                     </div>
                 </div>
+                {{/if}}
+                {{#if theme_settings.footer_service_item4_title}}
                 <div class="service-item">
                     <div class="service-wrapper">
-                        <i class="icon"><svg><use xlink:href="#icon-support"></use></svg></i>
-                        <h3 class="title">24/7 Help Center</h3>
-                        <p class="text">Metus tellus ultricies et quam sit amet commodo odio diam a libero nulla facilisi suspendissous enim sodales lacinia neque commodo.</p>
+                        {{#if theme_settings.footer_service_item4_icon}}<i class="icon"><svg><use xlink:href="#{{theme_settings.footer_service_item4_icon}}"></use></svg></i>{{/if}}
+                        <h3 class="title">{{theme_settings.footer_service_item4_title}}</h3>
+                        {{#if theme_settings.footer_service_item4_text}}<p class="text">{{theme_settings.footer_service_item4_text}}</p>{{/if}}
                     </div>
                 </div>
+                {{/if}}
             </div>
         </div>
     </div>
@@ -67,28 +77,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-1 col-sm-2">
-                    <h5>Further Info.</h5>
+                    {{#if theme_settings.footer_column1_heading}}<h5>{{theme_settings.footer_column1_heading}}</h5>{{/if}}
                     <ul>
-                        <li><a href="/blog/">Blog</a></li>
-                        <li><a href="/about-us/">About Us</a></li>
-                        <li><a href="/rss-syndication/">RSS Syndication</a></li>
-                        <li><a href="/shipping-returns/">Shipping & Returns</a></li>
-                        <li><a href="/theme-styles/">Theme Styles</a></li>
-                        <li><a href="/sitemap/">Sitemap</a></li>
-                        <li><a href="/contact-us/">Contact Us</a></li>
-                        <li><a href="#">Testimonials</a></li>
+                        {{#if theme_settings.footer_column1_link1_text}}<li><a href="{{theme_settings.footer_column1_link1_url}}">{{theme_settings.footer_column1_link1_text}}</a></li>{{/if}}
+                        {{#if theme_settings.footer_column1_link2_text}}<li><a href="{{theme_settings.footer_column1_link2_url}}">{{theme_settings.footer_column1_link2_text}}</a></li>{{/if}}
+                        {{#if theme_settings.footer_column1_link3_text}}<li><a href="{{theme_settings.footer_column1_link3_url}}">{{theme_settings.footer_column1_link3_text}}</a></li>{{/if}}
+                        {{#if theme_settings.footer_column1_link4_text}}<li><a href="{{theme_settings.footer_column1_link4_url}}">{{theme_settings.footer_column1_link4_text}}</a></li>{{/if}}
+                        {{#if theme_settings.footer_column1_link5_text}}<li><a href="{{theme_settings.footer_column1_link5_url}}">{{theme_settings.footer_column1_link5_text}}</a></li>{{/if}}
+                        {{#if theme_settings.footer_column1_link6_text}}<li><a href="{{theme_settings.footer_column1_link6_url}}">{{theme_settings.footer_column1_link6_text}}</a></li>{{/if}}
+                        {{#if theme_settings.footer_column1_link7_text}}<li><a href="{{theme_settings.footer_column1_link7_url}}">{{theme_settings.footer_column1_link7_text}}</a></li>{{/if}}
+                        {{#if theme_settings.footer_column1_link8_text}}<li><a href="{{theme_settings.footer_column1_link8_url}}">{{theme_settings.footer_column1_link8_text}}</a></li>{{/if}}
                     </ul>
                 </div>
                 <div class="col-2 col-sm-2">
-                    <h5>Customer Service</h5>
+                    {{#if theme_settings.footer_column2_heading}}<h5>{{theme_settings.footer_column2_heading}}</h5>{{/if}}
                     <ul>
-                        <li><a href="#">Help & FAQs</a></li>
-                        <li><a href="#">Terms of Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Online Returns Policy</a></li>
-                        <li><a href="#">Rewards Program</a></li>
-                        <li><a href="#">Rebate Center</a></li>
-                        <li><a href="#">Partners</a></li>
+                        {{#if theme_settings.footer_column2_link1_text}}<li><a href="{{theme_settings.footer_column2_link1_url}}">{{theme_settings.footer_column2_link1_text}}</a></li>{{/if}}
+                        {{#if theme_settings.footer_column2_link2_text}}<li><a href="{{theme_settings.footer_column2_link2_url}}">{{theme_settings.footer_column2_link2_text}}</a></li>{{/if}}
+                        {{#if theme_settings.footer_column2_link3_text}}<li><a href="{{theme_settings.footer_column2_link3_url}}">{{theme_settings.footer_column2_link3_text}}</a></li>{{/if}}
+                        {{#if theme_settings.footer_column2_link4_text}}<li><a href="{{theme_settings.footer_column2_link4_url}}">{{theme_settings.footer_column2_link4_text}}</a></li>{{/if}}
+                        {{#if theme_settings.footer_column2_link5_text}}<li><a href="{{theme_settings.footer_column2_link5_url}}">{{theme_settings.footer_column2_link5_text}}</a></li>{{/if}}
+                        {{#if theme_settings.footer_column2_link6_text}}<li><a href="{{theme_settings.footer_column2_link6_url}}">{{theme_settings.footer_column2_link6_text}}</a></li>{{/if}}
+                        {{#if theme_settings.footer_column2_link7_text}}<li><a href="{{theme_settings.footer_column2_link7_url}}">{{theme_settings.footer_column2_link7_text}}</a></li>{{/if}}
                     </ul>
                 </div>
                 <div class="col-3 col-sm-2">                   
@@ -138,11 +148,11 @@
                 </div>
                 <div class="footer-payment col-sm-6">
                     <p>
-                        <a title="Skrill" href="#"><img src="/product_images/uploaded_images/skrill.png" alt="Skrill"></a>
-                        <a title="Paypal" href="#"><img src="/product_images/uploaded_images/paypal.png" alt="Paypal"></a>
-                        <a title="Visa" href="#"><img src="/product_images/uploaded_images/visa.png" alt="Visa"></a>
-                        <a title="Express" href="#"><img src="/product_images/uploaded_images/american.png" alt="Express"></a>
-                        <a title="Master Card" href="#"><img src="/product_images/uploaded_images/mastercard.png" alt="Master Card"></a>
+                        {{#if theme_settings.footer_payment_logo1_image}}<a title="{{theme_settings.footer_payment_logo1_alt}}" href="{{theme_settings.footer_payment_logo1_link}}"><img src="{{theme_settings.footer_payment_logo1_image}}" alt="{{theme_settings.footer_payment_logo1_alt}}"></a>{{/if}}
+                        {{#if theme_settings.footer_payment_logo2_image}}<a title="{{theme_settings.footer_payment_logo2_alt}}" href="{{theme_settings.footer_payment_logo2_link}}"><img src="{{theme_settings.footer_payment_logo2_image}}" alt="{{theme_settings.footer_payment_logo2_alt}}"></a>{{/if}}
+                        {{#if theme_settings.footer_payment_logo3_image}}<a title="{{theme_settings.footer_payment_logo3_alt}}" href="{{theme_settings.footer_payment_logo3_link}}"><img src="{{theme_settings.footer_payment_logo3_image}}" alt="{{theme_settings.footer_payment_logo3_alt}}"></a>{{/if}}
+                        {{#if theme_settings.footer_payment_logo4_image}}<a title="{{theme_settings.footer_payment_logo4_alt}}" href="{{theme_settings.footer_payment_logo4_link}}"><img src="{{theme_settings.footer_payment_logo4_image}}" alt="{{theme_settings.footer_payment_logo4_alt}}"></a>{{/if}}
+                        {{#if theme_settings.footer_payment_logo5_image}}<a title="{{theme_settings.footer_payment_logo5_alt}}" href="{{theme_settings.footer_payment_logo5_link}}"><img src="{{theme_settings.footer_payment_logo5_image}}" alt="{{theme_settings.footer_payment_logo5_alt}}"></a>{{/if}}
                     </p>
                 </div>
             </div>

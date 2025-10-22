@@ -1,16 +1,34 @@
 <header class="header" role="banner">
 
     <!-- Begin Top Bar Promotion -->
+    {{#if theme_settings.top_bar_promo_enabled}}
     <div class="header-top hide" id="top-bar-promotion">
-        <a href="#" title=""><img src="/product_images/uploaded_images/top-bar-promotion.png" title="top-bar-promotion"></a>
+        {{#if theme_settings.top_bar_promo_image_url}}
+        <a href="{{theme_settings.top_bar_promo_link}}" title="{{theme_settings.top_bar_promo_alt_text}}">
+            <img src="{{theme_settings.top_bar_promo_image_url}}" alt="{{theme_settings.top_bar_promo_alt_text}}" title="{{theme_settings.top_bar_promo_alt_text}}">
+        </a>
+        {{/if}}
         <a href="javascript:void(0)" class="close"><svg><use xlink:href="#icon-close"></use></svg></a>
     </div>
+    {{/if}}
     <!-- End Top Bar Promotion -->
 
     <div class="header-top">
         <div class="row">
             <div class="col-left col-sm-4">
-                <p> <a href="#" title="Detail">Free International Shipping. No Minimum Purchase Required*<span>Detail</span></a></p>
+                {{#if theme_settings.top_bar_message_text}}
+                <p>
+                    {{#if theme_settings.top_bar_message_link_url}}
+                    <a href="{{theme_settings.top_bar_message_link_url}}" title="{{#if theme_settings.top_bar_message_link_title}}{{theme_settings.top_bar_message_link_title}}{{else}}{{theme_settings.top_bar_message_text}}{{/if}}">
+                        {{theme_settings.top_bar_message_text}}
+                        {{#if theme_settings.top_bar_message_detail_text}}<span>{{theme_settings.top_bar_message_detail_text}}</span>{{/if}}
+                    </a>
+                    {{else}}
+                        {{theme_settings.top_bar_message_text}}
+                        {{#if theme_settings.top_bar_message_detail_text}}<span>{{theme_settings.top_bar_message_detail_text}}</span>{{/if}}
+                    {{/if}}
+                </p>
+                {{/if}}
             </div>
             <div class="col-right col-sm-8 hidden-xs">
                 {{> components/common/navigation}}

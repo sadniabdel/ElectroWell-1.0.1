@@ -1,18 +1,10 @@
 <div class="halo-best-selling-promotion">
   <div class="container">
     <ul class="list-top">
-      <li class="hl-label">eMartica’s Best Selling:</li>
-      <li><a href="#" title="Mobiles & Tablets Accessories">Mobiles & Tablets Accessories</a></li>
-      <li><a href="#" title="Microsoft Surface Pro 3">Microsoft Surface Pro 3</a></li>
-      <li><a href="#" title="Smart Watches">Smart Watches</a></li>
-      <li><a href="#" title="PlayStation 4 Pro Console">PlayStation 4 Pro Console</a></li>
-      <li><a href="#" title="Canon EOS 700D">Canon EOS 700D</a></li>
-      <li><a href="#" title="Samsung Smart TVs">Samsung Smart TVs</a></li>
-      <li><a href="#" title="Home Appliances">Home Appliances</a></li>
-      <li><a href="#"><span>Macenas Conguros</span></a></li>      
-      <li><a href="#"><span>Sustoproines</span></a></li>      
-      <li><a href="#"><span>Destetos Harcudos</span></a></li>
-      <li class="showMore"><a href="javascript:void(0)">... More</a></li>
+      {{#if theme_settings.home_best_selling_label}}
+      <li class="hl-label">{{theme_settings.home_best_selling_label}}</li>
+      {{/if}}
+      {{{theme_settings.home_best_selling_links_html}}}
     </ul>
 
   </div>
@@ -21,25 +13,47 @@
 <div class="halo-custom-html-block hidden-mobile">
     <div class="container">
         <div class="row">
-              <label class="hl-label">The Store Advantage</label>
+              {{#if theme_settings.home_store_advantage_label}}
+              <label class="hl-label">{{theme_settings.home_store_advantage_label}}</label>
+              {{/if}}
+              {{#if theme_settings.home_store_advantage_item1_title}}
               <div class="box wow fadeInUp" data-wow-delay="200ms">
-                  <span class="icon"><i class="fa fa-check"></i></span>
-                  <h4>Shop with confidence</h4>
+                  {{#if theme_settings.home_store_advantage_item1_icon}}
+                  <span class="icon"><i class="{{theme_settings.home_store_advantage_item1_icon}}"></i></span>
+                  {{/if}}
+                  <h4>{{theme_settings.home_store_advantage_item1_title}}</h4>
+                  {{#if theme_settings.home_store_advantage_item1_text}}<p>{{theme_settings.home_store_advantage_item1_text}}</p>{{/if}}
               </div>
-              <div class="box wow fadeInUp" data-wow-delay="300ms">                
-                  <span class="icon"><i class="fa fa-cog"></i></span>
-                  <h4>Customizable PCs</h4>
+              {{/if}}
+              {{#if theme_settings.home_store_advantage_item2_title}}
+              <div class="box wow fadeInUp" data-wow-delay="300ms">
+                  {{#if theme_settings.home_store_advantage_item2_icon}}
+                  <span class="icon"><i class="{{theme_settings.home_store_advantage_item2_icon}}"></i></span>
+                  {{/if}}
+                  <h4>{{theme_settings.home_store_advantage_item2_title}}</h4>
+                  {{#if theme_settings.home_store_advantage_item2_text}}<p>{{theme_settings.home_store_advantage_item2_text}}</p>{{/if}}
               </div>
-              <div class="box last wow fadeInUp" data-wow-delay="400ms">                
-                  <span class="icon"><i class="fa fa-star"></i></span>
-                  <h4>Rewards Program</h4>
+              {{/if}}
+              {{#if theme_settings.home_store_advantage_item3_title}}
+              <div class="box last wow fadeInUp" data-wow-delay="400ms">
+                  {{#if theme_settings.home_store_advantage_item3_icon}}
+                  <span class="icon"><i class="{{theme_settings.home_store_advantage_item3_icon}}"></i></span>
+                  {{/if}}
+                  <h4>{{theme_settings.home_store_advantage_item3_title}}</h4>
+                  {{#if theme_settings.home_store_advantage_item3_text}}<p>{{theme_settings.home_store_advantage_item3_text}}</p>{{/if}}
               </div>
-              <div class="box last wow fadeInUp" data-wow-delay="500ms">                
-                  <span class="icon"><i class="fa fa-rotate-left"></i></span>
-                  <h4>14-Day Free Returns</h4>
+              {{/if}}
+              {{#if theme_settings.home_store_advantage_item4_title}}
+              <div class="box last wow fadeInUp" data-wow-delay="500ms">
+                  {{#if theme_settings.home_store_advantage_item4_icon}}
+                  <span class="icon"><i class="{{theme_settings.home_store_advantage_item4_icon}}"></i></span>
+                  {{/if}}
+                  <h4>{{theme_settings.home_store_advantage_item4_title}}</h4>
+                  {{#if theme_settings.home_store_advantage_item4_text}}<p>{{theme_settings.home_store_advantage_item4_text}}</p>{{/if}}
               </div>
-        </div>    
-    </div>    
+              {{/if}}
+        </div>
+    </div>
 </div>
 <div class="halo-custom-html-block hidden-pc">
     <div class="owl-carousel" data-owl='{
@@ -63,22 +77,42 @@
         },
         "responsiveRefreshRate": 0
      }'>
+        {{#if theme_settings.home_store_advantage_item1_title}}
         <div class="box wow fadeInUp" data-wow-delay="200ms">
-            <span class="icon"><i class="fa fa-check"></i></span>
-            <h4>Shop with confidence</h4>
+            {{#if theme_settings.home_store_advantage_item1_icon}}
+            <span class="icon"><i class="{{theme_settings.home_store_advantage_item1_icon}}"></i></span>
+            {{/if}}
+            <h4>{{theme_settings.home_store_advantage_item1_title}}</h4>
+            {{#if theme_settings.home_store_advantage_item1_text}}<p>{{theme_settings.home_store_advantage_item1_text}}</p>{{/if}}
         </div>
-        <div class="box wow fadeInUp" data-wow-delay="300ms">                
-            <span class="icon"><i class="fa fa-cog"></i></span>
-            <h4>Customizable PCs</h4>
+        {{/if}}
+        {{#if theme_settings.home_store_advantage_item2_title}}
+        <div class="box wow fadeInUp" data-wow-delay="300ms">
+            {{#if theme_settings.home_store_advantage_item2_icon}}
+            <span class="icon"><i class="{{theme_settings.home_store_advantage_item2_icon}}"></i></span>
+            {{/if}}
+            <h4>{{theme_settings.home_store_advantage_item2_title}}</h4>
+            {{#if theme_settings.home_store_advantage_item2_text}}<p>{{theme_settings.home_store_advantage_item2_text}}</p>{{/if}}
         </div>
-        <div class="box last wow fadeInUp" data-wow-delay="400ms">                
-            <span class="icon"><i class="fa fa-star"></i></span>
-            <h4>Rewards Program</h4>
+        {{/if}}
+        {{#if theme_settings.home_store_advantage_item3_title}}
+        <div class="box last wow fadeInUp" data-wow-delay="400ms">
+            {{#if theme_settings.home_store_advantage_item3_icon}}
+            <span class="icon"><i class="{{theme_settings.home_store_advantage_item3_icon}}"></i></span>
+            {{/if}}
+            <h4>{{theme_settings.home_store_advantage_item3_title}}</h4>
+            {{#if theme_settings.home_store_advantage_item3_text}}<p>{{theme_settings.home_store_advantage_item3_text}}</p>{{/if}}
         </div>
-        <div class="box last wow fadeInUp" data-wow-delay="500ms">                
-            <span class="icon"><i class="fa fa-rotate-left"></i></span>
-            <h4>14-Day Free Returns</h4>
+        {{/if}}
+        {{#if theme_settings.home_store_advantage_item4_title}}
+        <div class="box last wow fadeInUp" data-wow-delay="500ms">
+            {{#if theme_settings.home_store_advantage_item4_icon}}
+            <span class="icon"><i class="{{theme_settings.home_store_advantage_item4_icon}}"></i></span>
+            {{/if}}
+            <h4>{{theme_settings.home_store_advantage_item4_title}}</h4>
+            {{#if theme_settings.home_store_advantage_item4_text}}<p>{{theme_settings.home_store_advantage_item4_text}}</p>{{/if}}
         </div>
+        {{/if}}
     </div>
 </div>
 {{/if}}
