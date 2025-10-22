@@ -15,6 +15,9 @@ category:
     {{#if pagination.category.next}}
         <link rel="next" href="{{pagination.category.next}}">
     {{/if}}
+    {{!-- JSON-LD Structured Data for Category Page --}}
+    {{> components/common/breadcrumb-schema}}
+    {{> components/common/itemlist-schema}}
 {{/partial}}
 
 {{#partial "page"}}

@@ -1,0 +1,41 @@
+{{!-- ItemList JSON-LD Schema for Category/Product Listings --}}
+{{#if category.products}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "{{category.name}}",
+  "numberOfItems": {{category.products.length}},
+  "itemListElement": [
+    {{#each category.products}}
+    {
+      "@type": "ListItem",
+      "position": {{add @index 1}},
+      "item": {
+        "@type": "Product",
+        "name": {{json name}},
+        "url": "{{url}}",
+        {{#if image}}
+        "image": "{{getImage image 'productgallery_size'}}",
+        {{/if}}
+        {{#if brand.name}}
+        "brand": {
+          "@type": "Brand",
+          "name": {{json brand.name}}
+        },
+        {{/if}}
+        {{#unless (or (and price.with_tax (if price.with_tax.value '===' 0)) (and price.without_tax (if price.without_tax.value '===' 0)))}}
+        "offers": {
+          "@type": "Offer",
+          "price": "{{#if price.with_tax}}{{price.with_tax.value}}{{else}}{{price.without_tax.value}}{{/if}}",
+          "priceCurrency": "{{../currency_selector.active_currency_code}}",
+          "availability": "https://schema.org/{{#if out_of_stock}}OutOfStock{{else}}InStock{{/if}}"
+        }
+        {{/unless}}
+      }
+    }{{#unless @last}},{{/unless}}
+    {{/each}}
+  ]
+}
+</script>
+{{/if}}

@@ -1,0 +1,121 @@
+{{!-- Product JSON-LD Schema for Rich Snippets --}}
+{{#if product}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": {{json product.title}},
+  "image": [
+    {{#each product.images}}
+    "{{getImage this 'zoom_size'}}"{{#unless @last}},{{/unless}}
+    {{/each}}
+  ],
+  "description": {{json product.description}},
+  {{#if product.sku}}
+  "sku": {{json product.sku}},
+  {{/if}}
+  {{#if product.mpn}}
+  "mpn": {{json product.mpn}},
+  {{/if}}
+  {{#if product.gtin}}
+  "gtin": {{json product.gtin}},
+  {{/if}}
+  {{#if product.upc}}
+  "gtin13": {{json product.upc}},
+  {{/if}}
+  {{#if product.brand.name}}
+  "brand": {
+    "@type": "Brand",
+    "name": {{json product.brand.name}}
+  },
+  {{/if}}
+  {{#if product.num_reviews}}
+  {{#if product.num_reviews '>' 0}}
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{product.rating}}",
+    "reviewCount": "{{product.num_reviews}}",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  {{/if}}
+  {{/if}}
+  {{#if product.reviews.list}}
+  "review": [
+    {{#each product.reviews.list}}
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": {{json author.name}}
+      },
+      "datePublished": {{json date_created}},
+      "reviewBody": {{json text}},
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "{{rating}}",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }{{#unless @last}},{{/unless}}
+    {{/each}}
+  ],
+  {{/if}}
+  {{#if product.price}}
+  {{#unless (or (and product.price.with_tax (if product.price.with_tax.value '===' 0)) (and product.price.without_tax (if product.price.without_tax.value '===' 0)))}}
+  "offers": {
+    "@type": "Offer",
+    "url": "{{product.url}}",
+    "priceCurrency": "{{currency_selector.active_currency_code}}",
+    "price": "{{#if product.price.with_tax}}{{product.price.with_tax.value}}{{else}}{{product.price.without_tax.value}}{{/if}}",
+    "priceValidUntil": "{{date '2025-12-31' format='%Y-%m-%d'}}",
+    "itemCondition": "https://schema.org/{{#if product.condition}}{{product.condition}}{{else}}NewCondition{{/if}}",
+    "availability": "https://schema.org/{{#if product.out_of_stock}}OutOfStock{{else}}InStock{{/if}}",
+    {{#if product.shipping}}
+    {{#if product.shipping.price.value '===' 0}}
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "{{currency_selector.active_currency_code}}"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "US"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "businessDays": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        }
+      }
+    },
+    {{/if}}
+    {{/if}}
+    "seller": {
+      "@type": "Organization",
+      "name": "{{settings.store_name}}"
+    }
+  }
+  {{else}}
+  "offers": {
+    "@type": "Offer",
+    "url": "{{product.url}}",
+    "availability": "https://schema.org/{{#if product.out_of_stock}}OutOfStock{{else}}InStock{{/if}}",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": "0",
+      "priceCurrency": "{{currency_selector.active_currency_code}}"
+    },
+    "seller": {
+      "@type": "Organization",
+      "name": "{{settings.store_name}}"
+    }
+  }
+  {{/unless}}
+  {{/if}}
+}
+</script>
+{{/if}}

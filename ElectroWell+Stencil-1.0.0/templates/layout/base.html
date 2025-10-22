@@ -10,9 +10,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+        <!-- Performance and Mobile Optimization -->
+        <meta name="theme-color" content="#ffffff">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="format-detection" content="telephone=no">
+
         <!-- Enhanced SEO Meta Tags -->
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
         <link rel="canonical" href="{{canonical_url}}">
+
+        <!-- Google Verification (if needed) -->
+        {{#if theme_settings.google_site_verification}}
+        <meta name="google-site-verification" content="{{theme_settings.google_site_verification}}">
+        {{/if}}
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="{{#if page_type '==' 'product'}}product{{else}}website{{/if}}">
@@ -61,6 +72,11 @@
         {{inject 'maintenanceMode' settings.maintenance}}
         {{inject 'urls' urls}}
         {{{snippet 'htmlhead'}}}
+
+        <!-- JSON-LD Structured Data for SEO -->
+        {{> components/common/organization-schema}}
+        {{> components/common/website-schema}}
+
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-589d7698f6fa5c40"></script>
     </head>

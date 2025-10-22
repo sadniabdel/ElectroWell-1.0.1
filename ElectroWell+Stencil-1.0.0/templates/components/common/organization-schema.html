@@ -1,0 +1,42 @@
+{{!-- Organization JSON-LD Schema --}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{settings.store_name}}",
+  "url": "{{settings.store_url}}",
+  {{#if settings.store_logo}}
+  "logo": "{{settings.store_logo.data}}",
+  {{/if}}
+  {{#if settings.social_icon_placement_top}}
+  "sameAs": [
+    {{#if theme_settings.social_icon_facebook}}
+    "{{theme_settings.social_icon_facebook}}",
+    {{/if}}
+    {{#if theme_settings.social_icon_twitter}}
+    "{{theme_settings.social_icon_twitter}}",
+    {{/if}}
+    {{#if theme_settings.social_icon_instagram}}
+    "{{theme_settings.social_icon_instagram}}",
+    {{/if}}
+    {{#if theme_settings.social_icon_pinterest}}
+    "{{theme_settings.social_icon_pinterest}}",
+    {{/if}}
+    {{#if theme_settings.social_icon_youtube}}
+    "{{theme_settings.social_icon_youtube}}"
+    {{/if}}
+  ],
+  {{/if}}
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    {{#if settings.store_phone}}
+    "telephone": "{{settings.store_phone}}",
+    {{/if}}
+    {{#if settings.store_email}}
+    "email": "{{settings.store_email}}",
+    {{/if}}
+    "availableLanguage": ["English"]
+  }
+}
+</script>
