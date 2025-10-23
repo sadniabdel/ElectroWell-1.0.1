@@ -1,0 +1,142 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   ElectroWell Theme - QUICK START GUIDE                         ║
+║   Fix for TR-601 Error (Missing Parsed Templates)               ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────┐
+│ THE PROBLEM:                                                     │
+│ Modified theme won't upload - "TR-601: missing parsed templates"│
+└──────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────┐
+│ THE SOLUTION (Takes 10 minutes):                                 │
+└──────────────────────────────────────────────────────────────────┘
+
+🎯 EASIEST METHOD - WebDAV Editing:
+
+   Step 1: Upload ORIGINAL theme
+   ├─ Get commit d6fd6ae (before modifications)
+   ├─ Zip ElectroWell+Stencil-1.0.0 folder
+   ├─ Upload to BigCommerce
+   └─ ✅ Works immediately!
+
+   Step 2: Enable WebDAV
+   ├─ BigCommerce Admin → Server Settings → WebDAV
+   ├─ Enable access
+   └─ Note credentials
+
+   Step 3: Connect via WebDAV
+   ├─ Host: https://store-{hash}.mybigcommerce.com
+   ├─ Username: Your admin email
+   └─ Password: Your WebDAV password
+
+   Step 4: Edit config.json
+   ├─ Download /template/config.json
+   ├─ Add customizations (see CUSTOMIZATION_GUIDE.md)
+   ├─ Validate at jsonlint.com
+   └─ Upload back
+
+   Step 5: Done!
+   └─ Changes are live immediately!
+
+┌──────────────────────────────────────────────────────────────────┐
+│ WHAT YOU GET:                                                    │
+└──────────────────────────────────────────────────────────────────┘
+
+✅ 100+ Customization Options
+   ├─ Header (top bar, free shipping, navigation)
+   ├─ Megamenu (4 images + 6 brands)
+   ├─ Home Page (banners, categories, brands)
+   └─ Footer (info, services, payments)
+
+✅ All Working via config.json
+   └─ No bundling needed with WebDAV method
+
+┌──────────────────────────────────────────────────────────────────┐
+│ DOCUMENTATION FILES:                                             │
+└──────────────────────────────────────────────────────────────────┘
+
+📖 README.md                    - Overview & quick start
+📖 INSTALLATION_SOLUTION.md     - Detailed TR-601 fix ⭐ START HERE
+📖 CUSTOMIZATION_GUIDE.md       - All 100+ settings explained
+📖 BUNDLING_GUIDE.md            - Stencil CLI alternative method
+
+┌──────────────────────────────────────────────────────────────────┐
+│ KEY SETTINGS (config.json):                                      │
+└──────────────────────────────────────────────────────────────────┘
+
+// Top Bar Promotion
+"show_top_bar_promotion": true,
+"top_bar_promotion_image": "/product_images/uploaded_images/banner.png",
+"top_bar_promotion_link": "/sale",
+
+// Free Shipping
+"header_free_shipping_text": "Free Shipping on Orders $50+",
+"header_free_shipping_link": "/shipping-policy",
+
+// Megamenu Images (4 total)
+"megamenu_image_1": "/product_images/uploaded_images/promo1.jpg",
+"megamenu_image_1_link": "/electronics",
+
+// Home Categories (6 total)
+"home_category1_image": "/product_images/uploaded_images/cat1.jpg",
+"home_category1_link": "/appliances",
+"home_category1_title": "Home Appliances",
+
+// Footer
+"footer_info_phone": "1-800-555-0123",
+"footer_info_email": "support@yourstore.com",
+
+... and 90+ more settings!
+
+┌──────────────────────────────────────────────────────────────────┐
+│ TROUBLESHOOTING:                                                 │
+└──────────────────────────────────────────────────────────────────┘
+
+❌ Still getting TR-601 error?
+   → Use WebDAV method (upload original theme first)
+
+❌ Options not in Theme Editor?
+   → Expected! Text fields don't show. Edit config.json instead.
+
+❌ Changes not appearing?
+   → Clear cache, validate JSON, check file paths
+
+❌ JSON syntax error?
+   → Validate at jsonlint.com
+
+┌──────────────────────────────────────────────────────────────────┐
+│ SUPPORT:                                                         │
+└──────────────────────────────────────────────────────────────────┘
+
+📚 Full docs in INSTALLATION_SOLUTION.md
+🔧 WebDAV guide: support.bigcommerce.com/s/article/File-Access-WebDAV
+✅ JSON validator: jsonlint.com
+🎨 Icons: fontawesome.com/v4.7.0/icons/
+
+┌──────────────────────────────────────────────────────────────────┐
+│ SUCCESS CHECKLIST:                                               │
+└──────────────────────────────────────────────────────────────────┘
+
+□ Upload original theme (✅ works immediately!)
+□ Enable WebDAV
+□ Connect to WebDAV
+□ Download config.json
+□ Add customizations
+□ Validate JSON
+□ Upload back
+□ Refresh storefront
+□ 🎉 Done!
+
+═══════════════════════════════════════════════════════════════════
+
+💡 TIP: WebDAV editing is how many pro agencies customize themes!
+         No bundling, instant changes, no dependency issues.
+
+═══════════════════════════════════════════════════════════════════
+
+🚀 Ready to start? Read: INSTALLATION_SOLUTION.md
+
+═══════════════════════════════════════════════════════════════════
